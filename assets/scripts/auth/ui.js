@@ -28,23 +28,23 @@ const signInFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  $('.sign-out-message').text('Hurry back to The Village!')
+  $('.sign-up-message').text('Hurry back to The Village!')
   store.user = null
   // Reset form:
   $('form').trigger('reset')
 }
 
 const signOutFailure = function (error) {
-  $('.sign-in-message').text('Sign out fail: ' + error.responseJSON.message)
+  $('.sign-up-message').text('Sign out fail: ' + error.responseJSON.message)
 }
 
 const changePasswordSuccess = function () {
-  $('.change-pw-message').text('Password changed successfully!')
+  $('.sign-in-message').text('Password changed successfully!')
   $('form').trigger('reset')
 }
 
 const changePasswordFailure = function (error) {
-  $('.change-pw-message').text('Password change failed with error: ' + error.responseJSON.message)
+  $('.sign-in-message').text('Password change failed with error: ' + error.responseJSON.message)
 }
 
 module.exports = {

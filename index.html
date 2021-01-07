@@ -15,7 +15,6 @@
       <div class="unauthenticated">
       <h1 class="welcome-message">Welcome to The Village</h1>
       <h4 class="sign-up-message"></h4>
-      <h4 class="sign-out-message"></h4>
       <form id="sign-up">
         <input name="credentials[email]" type="text" placeholder="enter your email" aria-label="sign-up">
         <input name="credentials[password]" type="password" placeholder="create a password" aria-label="sign-up">
@@ -30,11 +29,20 @@
       </div>
       <div class="authenticated">
       <h4 class="sign-in-message"></h4>
-      <h4 class="change-pw-message"></h4>
       <form id="change-password">
         <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password">
         <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
+      </form>
+      <form id="create-children">
+        <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children">
+        <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="create-children">
+        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children">
+        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Child</button>
+      </form>
+      <form id="index-children">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Show Children</button>
       </form>
       <form id="sign-out">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
