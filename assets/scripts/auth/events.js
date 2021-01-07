@@ -19,6 +19,8 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   // Prevent the page from refreshing
   event.preventDefault()
+  $('.authenticated').show()
+  $('.unauthenticated').hide()
   // Get data from form
   // Pass the form DOM object to `getFormFields`
   // use event.target as the form
@@ -31,7 +33,9 @@ const onSignIn = function (event) {
 
 const onSignOut = function (event) {
   event.preventDefault()
-
+  $('.authenticated').hide()
+  $('.unauthenticated').show()
+  $('.welcome-message').hide()
   // const form = event.target
   // const data = getFormFields(form)
   api.signOut()
@@ -39,8 +43,21 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onChangePassword = function (event) {
+  event.preventDefault()
+
+  // get data from form:
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.changePassword(data)
+    .then(ui.changePasswordSuccess)
+    .catch(ui.changePasswordFailure)
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
-  onSignOut
+  onSignOut,
+  onChangePassword
 }
