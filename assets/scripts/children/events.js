@@ -50,9 +50,23 @@ const onFindChild = function (event) {
     .catch(ui.findChildFailure)
 }
 
+const onDeleteChild = function (event) {
+  // Prevent the page from refreshing
+  event.preventDefault()
+  // get data from form
+  // Pass the form DOM object to `getFormFields`:
+  // Use event.target as the form
+  const form = event.target
+  const data = getFormFields(form)
+  api.deleteChild(data)
+    .then(ui.deleteChildSuccess)
+    .catch(ui.deleteChildFailure)
+}
+
 module.exports = {
   onCreateChildren,
   onIndexChildren,
   onUpdateChildren,
-  onFindChild
+  onFindChild,
+  onDeleteChild
 }

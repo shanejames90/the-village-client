@@ -56,6 +56,15 @@ const findChildFailure = function (error) {
   $('.sign-in-message').text('failed with error: ' + error.responseJSON.message)
 }
 
+const deleteChildSuccess = function (response) {
+  $('#delete-message').text('Successfully Deleted!')
+  $('form').trigger('reset')
+}
+
+const deleteChildFailure = function (error) {
+  $('#delete-message').text('failed with error: ' + error.responseJSON.message)
+}
+
 module.exports = {
   createChildrenSuccess,
   createChildrenFailure,
@@ -64,5 +73,7 @@ module.exports = {
   updateChildrenSuccess,
   updateChildrenFailure,
   findChildSuccess,
-  findChildFailure
+  findChildFailure,
+  deleteChildSuccess,
+  deleteChildFailure
 }

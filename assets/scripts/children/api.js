@@ -48,9 +48,22 @@ const findChild = function (data) {
   })
 }
 
+const deleteChild = function (data) {
+  // store id in variable and pass it to end of path
+  const id = data.child.id
+  return $.ajax({
+    url: config.apiUrl + '/children/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createChildren,
   indexChildren,
   updateChildren,
-  findChild
+  findChild,
+  deleteChild
 }
