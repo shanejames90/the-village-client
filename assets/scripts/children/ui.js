@@ -18,13 +18,30 @@ const createChildrenFailure = function (error) {
 }
 
 const indexChildrenSuccess = function (response) {
-  console.log(response)
+  // console.log(response.children)
   store.children = response.children
-  $('.sign-in-message').text(`${store.children}`)
+  const output = JSON.stringify(store.children)
+  $('#display-children').text(output)
+}
+
+const indexChildrenFailure = function (error) {
+  $('.sign-up-message').text('failed with error: ' + error.responseJSON.message)
+}
+
+const updateChildrenSuccess = function (data) {
+  $('.sign-in-message').text('Successfully Updated')
+  $('form').trigger('reset')
+}
+
+const updateChildrenFailure = function (error) {
+  $('.sign-up-message').text('failed with error: ' + error.responseJSON.message)
 }
 
 module.exports = {
   createChildrenSuccess,
   createChildrenFailure,
-  indexChildrenSuccess
+  indexChildrenSuccess,
+  indexChildrenFailure,
+  updateChildrenSuccess,
+  updateChildrenFailure
 }

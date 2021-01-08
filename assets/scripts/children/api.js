@@ -23,7 +23,21 @@ const indexChildren = function () {
   })
 }
 
+const updateChildren = function (data) {
+  // store id in variable and pass it to end of path
+  const id = data.child.id
+  return $.ajax({
+    url: config.apiUrl + '/children/' + id,
+    method: 'PATCH',
+    data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createChildren,
-  indexChildren
+  indexChildren,
+  updateChildren
 }

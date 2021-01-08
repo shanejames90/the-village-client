@@ -23,7 +23,22 @@ const onIndexChildren = function (event) {
     .then(ui.indexChildrenSuccess)
     .catch(ui.indexChildrenFailure)
 }
+
+const onUpdateChildren = function (event) {
+  // Prevent the page from refreshing
+  event.preventDefault()
+  // get data from form
+  // Pass the form DOM object to `getFormFields`:
+  // Use event.target as the form
+  const form = event.target
+  const data = getFormFields(form)
+  api.updateChildren(data)
+    .then(ui.updateChildrenSuccess)
+    .catch(ui.updateChildrenFailure)
+}
+
 module.exports = {
   onCreateChildren,
-  onIndexChildren
+  onIndexChildren,
+  onUpdateChildren
 }
