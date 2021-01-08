@@ -37,8 +37,22 @@ const onUpdateChildren = function (event) {
     .catch(ui.updateChildrenFailure)
 }
 
+const onFindChild = function (event) {
+  // Prevent the page from refreshing
+  event.preventDefault()
+  // get data from form
+  // Pass the form DOM object to `getFormFields`:
+  // Use event.target as the form
+  const form = event.target
+  const data = getFormFields(form)
+  api.findChild(data)
+    .then(ui.findChildSuccess)
+    .catch(ui.findChildFailure)
+}
+
 module.exports = {
   onCreateChildren,
   onIndexChildren,
-  onUpdateChildren
+  onUpdateChildren,
+  onFindChild
 }

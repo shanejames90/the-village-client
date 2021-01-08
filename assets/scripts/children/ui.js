@@ -14,7 +14,7 @@ const createChildrenSuccess = function (data) {
 // The ajax function's .catch
 // will pass this funciton an error object
 const createChildrenFailure = function (error) {
-  $('.sign-up-message').text('Sign up failed with error: ' + error.responseJSON.message)
+  $('.sign-in-message').text('Sign up failed with error: ' + error.responseJSON.message)
 }
 
 const indexChildrenSuccess = function (response) {
@@ -23,29 +23,37 @@ const indexChildrenSuccess = function (response) {
   // storing store.user, must give back only children owned by store.user
   const owned = store.user._id
   const myChildren = allChildren.filter(myChildren => myChildren.owner === owned)
-  console.log(myChildren)
-  const childHTML = (`
-  <div class="child-count">
-    <h4>User has ${myChildren}</h4>
-  </div>`)
-  $('#display-children').html(childHTML)
-  // myChildren.forEach(element => )
-  // myChildren.forEach(function (item, index, array) {
-  // $('#display-children').html(myChildren)
-  // })
+  // console.log(myChildren)
+  const childString = JSON.stringify({ myChildren })
+  // console.log(childString)
+  $('#display-children').text(childString)
 }
 
 const indexChildrenFailure = function (error) {
-  $('.sign-up-message').text('failed with error: ' + error.responseJSON.message)
+  $('.sign-in-message').text('failed with error: ' + error.responseJSON.message)
 }
 
-const updateChildrenSuccess = function (data) {
+const updateChildrenSuccess = function (response) {
   $('.sign-in-message').text('Successfully Updated')
   $('form').trigger('reset')
 }
 
 const updateChildrenFailure = function (error) {
-  $('.sign-up-message').text('failed with error: ' + error.responseJSON.message)
+  $('.sign-in-message').text('failed with error: ' + error.responseJSON.message)
+}
+
+const findChildSuccess = function (response) {
+  // store response resource in a variable
+  const foundChild = response.child
+  // turn to string
+  const foundString = JSON.stringify({ foundChild })
+  $('.sign-in-message').text('Successfully Found Child!')
+  $('#display-find').text(foundString)
+  $('form').trigger('reset')
+}
+
+const findChildFailure = function (error) {
+  $('.sign-in-message').text('failed with error: ' + error.responseJSON.message)
 }
 
 module.exports = {
@@ -54,5 +62,7 @@ module.exports = {
   indexChildrenSuccess,
   indexChildrenFailure,
   updateChildrenSuccess,
-  updateChildrenFailure
+  updateChildrenFailure,
+  findChildSuccess,
+  findChildFailure
 }

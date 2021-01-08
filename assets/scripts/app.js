@@ -18,4 +18,5 @@ $(() => {
   $('#create-children').on('submit', childrenEvents.onCreateChildren)
   $('#index-children').on('submit', childrenEvents.onIndexChildren)
   $('#update-children').on('submit', childrenEvents.onUpdateChildren)
+  $('#find-child').on('submit', childrenEvents.onFindChild)
 })
