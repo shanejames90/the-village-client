@@ -19,9 +19,20 @@ const createChildrenFailure = function (error) {
 
 const indexChildrenSuccess = function (response) {
   // console.log(response.children)
-  store.children = response.children
-  const output = JSON.stringify(store.children)
-  $('#display-children').text(output)
+  const allChildren = response.children
+  // storing store.user, must give back only children owned by store.user
+  const owned = store.user._id
+  const myChildren = allChildren.filter(myChildren => myChildren.owner === owned)
+  console.log(myChildren)
+  const childHTML = (`
+  <div class="child-count">
+    <h4>User has ${myChildren}</h4>
+  </div>`)
+  $('#display-children').html(childHTML)
+  // myChildren.forEach(element => )
+  // myChildren.forEach(function (item, index, array) {
+  // $('#display-children').html(myChildren)
+  // })
 }
 
 const indexChildrenFailure = function (error) {
