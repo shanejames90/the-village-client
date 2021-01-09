@@ -73,19 +73,89 @@
       </div>
       </div>
       <div class="authenticated">
+        <h5 id="delete-message"></h5>
         <div class="d-flex" id="wrapper">
           <!-- Sidebar -->
           <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
+
+              <!-- add child modal -->
+              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child</button>
+              <div class="modal fade" id="addChildModal" tabindex="-1" role="dialog" aria-labelledby="addChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addChildModalLabel">Add Child</h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="create-children">
+                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children">
+                        <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="create-children">
+                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children">
+                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Child</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <form id="index-children">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Show Children</button>
+                <button class="btn btn-outline-success btn-lg btn-block" type="submit">Show Children</button>
               </form>
-              <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
+
+              <!-- update child modal -->
+              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update A Child</button>
+              <div class="modal fade" id="updateChildModal" tabindex="-1" role="dialog" aria-labelledby="updateChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="updateChildModalLabel">Update Child</h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="update-children">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="update-children">
+                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="update-children">
+                        <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="update-children">
+                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="update-children">
+                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="update-children">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Update Child</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
               <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
-              <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+
+              <!-- delete child modal -->
+              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete Child</button>
+              <div class="modal fade" id="deleteChildModal" tabindex="-1" role="dialog" aria-labelledby="deleteChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="deleteChildModalLabel">Delete Child</h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="delete-child">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Delete Child</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
                 <!--  change password modal -->
-              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button>
+              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button>
               <div class="modal fade" id="pwModal" tabindex="-1" role="dialog" aria-labelledby="pwModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -106,7 +176,7 @@
                 </div>
               </div>
               <form id="sign-out">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
+                <button class="btn btn-outline-success btn-lg btn-block" type="submit">Sign Out</button>
               </form>
             </div>
           </div>
@@ -123,36 +193,10 @@
               <h4 class="sign-in-message"></h4>
               <h5 id="display-children"></h5>
             </div>
-          <!-- <form id="change-password">
-            <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password">
-            <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
-          </form> -->
-          <form id="create-children">
-            <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children">
-            <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="create-children">
-            <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children">
-            <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Child</button>
-          </form>
-
-          <form id="update-children">
-            <input name="child[id]" type="text" placeholder="child id" aria-label="update-children">
-            <input name="child[firstName]" type="text" placeholder="first name" aria-label="update-children">
-            <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="update-children">
-            <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="update-children">
-            <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="update-children">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Update Child</button>
-          </form>
           <form id="find-child">
             <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find Child</button>
             <h5 id="display-find"></h5>
-          </form>
-          <form id="delete-child">
-            <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Delete Child</button>
-            <h5 id="delete-message"></h5>
           </form>
           </div>
         </div>

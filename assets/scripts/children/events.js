@@ -11,6 +11,7 @@ const onCreateChildren = function (event) {
   // Use event.target as the form
   const form = event.target
   const data = getFormFields(form)
+  $('#addChildModal').modal('hide')
   api.createChildren(data)
     .then(ui.createChildrenSuccess)
     .catch(ui.createChildrenFailure)
@@ -32,6 +33,7 @@ const onUpdateChildren = function (event) {
   // Use event.target as the form
   const form = event.target
   const data = getFormFields(form)
+  $('#updateChildModal').modal('hide')
   api.updateChildren(data)
     .then(ui.updateChildrenSuccess)
     .catch(ui.updateChildrenFailure)
@@ -58,6 +60,7 @@ const onDeleteChild = function (event) {
   // Use event.target as the form
   const form = event.target
   const data = getFormFields(form)
+  $('#deleteChildModal').modal('hide')
   api.deleteChild(data)
     .then(ui.deleteChildSuccess)
     .catch(ui.deleteChildFailure)
