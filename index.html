@@ -72,8 +72,8 @@
         </div>
       </div>
       </div>
+      <!-- Beginning of AUTH Events -->
       <div class="authenticated">
-        <h5 id="delete-message"></h5>
         <div class="d-flex" id="wrapper">
           <!-- Sidebar -->
           <div class="bg-light border-right" id="sidebar-wrapper">
@@ -108,7 +108,7 @@
               </form>
 
               <!-- update child modal -->
-              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update A Child</button>
+              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child</button>
               <div class="modal fade" id="updateChildModal" tabindex="-1" role="dialog" aria-labelledby="updateChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -131,8 +131,27 @@
                   </div>
                 </div>
               </div>
-              <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-              <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+
+              <!-- find a child modal -->
+              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child</button>
+              <div class="modal fade" id="findChildModal" tabindex="-1" role="dialog" aria-labelledby="findChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="findChildModalLabel">Find Your Child</h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="find-child">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
               <!-- delete child modal -->
               <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete Child</button>
@@ -186,18 +205,13 @@
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="glyphicon glyphicon-list"></span>
               </button>
-              <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              </div> -->
             </nav>
             <div class="container-fluid">
               <h4 class="sign-in-message"></h4>
               <h5 id="display-children"></h5>
+              <h5 id="display-find"></h5>
+              <h5 id="delete-message"></h5>
             </div>
-          <form id="find-child">
-            <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find Child</button>
-            <h5 id="display-find"></h5>
-          </form>
           </div>
         </div>
       </div>

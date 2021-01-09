@@ -47,6 +47,7 @@ const onFindChild = function (event) {
   // Use event.target as the form
   const form = event.target
   const data = getFormFields(form)
+  $('#findChildModal').modal('hide')
   api.findChild(data)
     .then(ui.findChildSuccess)
     .catch(ui.findChildFailure)
