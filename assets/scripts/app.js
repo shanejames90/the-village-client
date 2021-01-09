@@ -14,7 +14,6 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
-
   $('#create-children').on('submit', childrenEvents.onCreateChildren)
   $('#index-children').on('submit', childrenEvents.onIndexChildren)
   $('#update-children').on('submit', childrenEvents.onUpdateChildren)
