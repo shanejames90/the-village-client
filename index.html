@@ -14,59 +14,49 @@
     <body>
       <div class="unauthenticated">
         <div class="pos-f-t">
-          <div class="collapse" id="navbarToggleExternalContentUnauth">
-            <div class="bg-dark p-4">
-              <span class="text-muted">
-                <form id="sign-in">
-                  <input name="credentials[email]" type="text" placeholder="email" aria-label="sign-in">
-                  <input name="credentials[password]" type="password" placeholder="password" aria-label="sign-in">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In</button>
-                </form>
-              </span>
-            </div>
-          </div>
           <nav class="navbar navbar-dark bg-dark">
-          <form id="sign-in">
-            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContentUnauth" aria-controls="navbarToggleExternalContentUnauth" aria-expanded="false" aria-label="Toggle navigation">
-              <span>Returning Villagers</span>
-            </button>
-          </form>
+            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" data-whatever="">Get Started!</button>
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+                    <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                   <div class="modal-body">
+                      <form id="sign-up">
+                        <div class="form-group">
+                          <label for="email-address" class="col-form-label">Email:</label>
+                          <input name="credentials[email]" class="form-control" id="email-address" type="text" placeholder="enter your email" aria-label="sign-up">
+                        </div>
+                        <div class="form-group">
+                          <label for="password-input" class="col-form-label">Password:</label>
+                          <input name="credentials[password]" class="form-control" type="password" id="password-input" placeholder="create a password" aria-label="sign-up">
+                        </div>
+                        <div class="form-group">
+                          <label for="confirm-password" class="col-form-label">Confirm Password:</label>
+                          <input name="credentials[password_confirmation]" class="form-control" id="confirm-password" type="password" placeholder="confirm password" aria-label="sign-up">
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-outline-success my-2 my-sm-0" data-dismiss="modal">Close</button>
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+                        </div>
+                      </form>
+                  </div>
+                </div>
+              </div>
+            </div>
             <h1 class="welcome-message">Welcome to The Village</h1>
           </nav>
         </div>
       <h4 class="sign-up-message"></h4>
-      <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" data-whatever="">Join The Village!</button>
-      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
-              <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-             <div class="modal-body">
-                <form id="sign-up">
-                  <div class="form-group">
-                    <label for="email-address" class="col-form-label">Email:</label>
-                    <input name="credentials[email]" class="form-control" id="email-address" type="text" placeholder="enter your email" aria-label="sign-up">
-                  </div>
-                  <div class="form-group">
-                    <label for="password-input" class="col-form-label">Password:</label>
-                    <input name="credentials[password]" class="form-control" type="password" id="password-input" placeholder="create a password" aria-label="sign-up">
-                  </div>
-                  <div class="form-group">
-                    <label for="confirm-password" class="col-form-label">Confirm Password:</label>
-                    <input name="credentials[password_confirmation]" class="form-control" id="confirm-password" type="password" placeholder="confirm password" aria-label="sign-up">
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success my-2 my-sm-0" data-dismiss="modal">Close</button>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
-                  </div>
-                </form>
-            </div>
-          </div>
-        </div>
+      <form id="sign-in">
+        <input name="credentials[email]" type="text" placeholder="email" aria-label="sign-in">
+        <input name="credentials[password]" type="password" placeholder="password" aria-label="sign-in">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In</button>
+      </form>
       </div>
       <div class="authenticated">
         <div class="pos-f-t">
