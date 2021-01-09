@@ -50,7 +50,8 @@ const onChangePassword = function (event) {
   // get data from form:
   const form = event.target
   const data = getFormFields(form)
-
+  // hide modal on submit button click
+  $('#pwModal').modal('hide')
   api.changePassword(data)
     .then(ui.changePasswordSuccess)
     .catch(ui.changePasswordFailure)

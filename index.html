@@ -77,11 +77,34 @@
           <!-- Sidebar -->
           <div class="bg-light border-right" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
-              <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
+              <form id="index-children">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Show Children</button>
+              </form>
               <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
               <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
               <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
               <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+                <!--  change password modal -->
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button>
+              <div class="modal fade" id="pwModal" tabindex="-1" role="dialog" aria-labelledby="pwModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="pwModalLabel">Change Password</h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="change-password">
+                        <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password">
+                        <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <form id="sign-out">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
               </form>
@@ -98,12 +121,13 @@
             </nav>
             <div class="container-fluid">
               <h4 class="sign-in-message"></h4>
+              <h5 id="display-children"></h5>
             </div>
-          <form id="change-password">
+          <!-- <form id="change-password">
             <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password">
             <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
-          </form>
+          </form> -->
           <form id="create-children">
             <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children">
             <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="create-children">
@@ -111,10 +135,7 @@
             <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Child</button>
           </form>
-          <form id="index-children">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Show Children</button>
-            <h5 id="display-children"></h5>
-          </form>
+
           <form id="update-children">
             <input name="child[id]" type="text" placeholder="child id" aria-label="update-children">
             <input name="child[firstName]" type="text" placeholder="first name" aria-label="update-children">
