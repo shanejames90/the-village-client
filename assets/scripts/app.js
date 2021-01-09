@@ -12,6 +12,10 @@ $(() => {
   $('.authenticated').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
+  $('#menu-toggle').click(function (e) {
+    e.preventDefault()
+    $('#wrapper').toggleClass('toggled')
+  })
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#create-children').on('submit', childrenEvents.onCreateChildren)
