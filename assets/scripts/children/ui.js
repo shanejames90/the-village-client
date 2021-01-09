@@ -25,7 +25,15 @@ const indexChildrenSuccess = function (response) {
   const myChildren = allChildren.filter(myChildren => myChildren.owner === owned)
   // console.log(myChildren)
   const childString = JSON.stringify({ myChildren })
+
+  // const childObj = {
+  //   name: childString.firstName,
+  //   birthDate: childString.dob,
+  //   birthWeight: childString.birthWeight,
+  //   birthLength: childString.birthLength
+  // }
   // console.log(childString)
+  // $('#display-children').text(childObj)
   $('#display-children').text(childString)
 }
 
