@@ -19,8 +19,9 @@ const onCreateChildren = function (event) {
 
 const onIndexChildren = function (event) {
   event.preventDefault()
-
-  api.indexChildren()
+  const form = event.target
+  const data = getFormFields(form)
+  api.indexChildren(data)
     .then(ui.indexChildrenSuccess)
     .catch(ui.indexChildrenFailure)
 }

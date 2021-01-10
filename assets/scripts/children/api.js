@@ -13,10 +13,11 @@ const createChildren = function (data) {
   })
 }
 
-const indexChildren = function () {
+const indexChildren = function (data) {
   return $.ajax({
     url: config.apiUrl + '/children',
     method: 'GET',
+    data,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }

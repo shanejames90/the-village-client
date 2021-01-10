@@ -7,7 +7,7 @@ const store = require('./../store')
 const createChildrenSuccess = function (data) {
   // This generates a new game id when New Game button is hit.
   store.child = data.child
-  $('.sign-in-message').text(`${store.child.firstName} successfully added to The Village!`)
+  $('.sign-in-message').text(`${store.child.name} successfully added to The Village!`)
   $('form').trigger('reset')
 }
 
@@ -18,9 +18,19 @@ const createChildrenFailure = function (error) {
 }
 
 const indexChildrenSuccess = function (response) {
+  console.log(response)
   const allChildren = response.children
-  const foundString = JSON.stringify({ allChildren })
-  $('#display-children').text(foundString)
+  let allListHTML = ''
+  allChildren.forEach(myChild => {
+    const myChildHTML = (`
+      <ul class="list-group list-group-horizontal-md" id="myList">
+        <li class="list-group-item" id="myListName">Name: ${myChild.name}</li>
+        <li class="list-group-item" id="myListDob">Date of Birth: ${myChild.dob}</li>
+      </ul>`)
+    allListHTML += myChildHTML
+  })
+  $('.display-children').show()
+  $('.display-children').html(allListHTML)
 }
 
 const indexChildrenFailure = function (error) {
