@@ -18,23 +18,9 @@ const createChildrenFailure = function (error) {
 }
 
 const indexChildrenSuccess = function (response) {
-  // console.log(response.children)
   const allChildren = response.children
-  // storing store.user, must give back only children owned by store.user
-  const owned = store.user._id
-  const myChildren = allChildren.filter(myChildren => myChildren.owner === owned)
-  // console.log(myChildren)
-  const childString = JSON.stringify({ myChildren })
-
-  // const childObj = {
-  //   name: childString.firstName,
-  //   birthDate: childString.dob,
-  //   birthWeight: childString.birthWeight,
-  //   birthLength: childString.birthLength
-  // }
-  // console.log(childString)
-  // $('#display-children').text(childObj)
-  $('#display-children').text(childString)
+  const foundString = JSON.stringify({ allChildren })
+  $('#display-children').text(foundString)
 }
 
 const indexChildrenFailure = function (error) {

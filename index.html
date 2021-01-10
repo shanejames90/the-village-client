@@ -80,7 +80,7 @@
             <div class="list-group list-group-flush">
 
               <!-- add child modal -->
-              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child</button>
+              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child</button>
               <div class="modal fade" id="addChildModal" tabindex="-1" role="dialog" aria-labelledby="addChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -104,11 +104,11 @@
               </div>
 
               <form id="index-children">
-                <button class="btn btn-outline-success btn-lg btn-block" type="submit">Show Children</button>
+                <button class="btn btn-outline-info btn-lg btn-block" type="submit">Show Children</button>
               </form>
 
               <!-- update child modal -->
-              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child</button>
+              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child</button>
               <div class="modal fade" id="updateChildModal" tabindex="-1" role="dialog" aria-labelledby="updateChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -120,7 +120,7 @@
                     </div>
                     <div class="modal-body">
                       <form id="update-children">
-                        <input name="child[id]" type="text" placeholder="child id" aria-label="update-children">
+                        <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="update-children"> -->
                         <input name="child[firstName]" type="text" placeholder="first name" aria-label="update-children">
                         <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="update-children">
                         <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="update-children">
@@ -133,7 +133,7 @@
               </div>
 
               <!-- find a child modal -->
-              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child</button>
+              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child</button>
               <div class="modal fade" id="findChildModal" tabindex="-1" role="dialog" aria-labelledby="findChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -145,7 +145,8 @@
                     </div>
                     <div class="modal-body">
                       <form id="find-child">
-                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
+                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="find-child">
+                        <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="find-child"> -->
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find</button>
                       </form>
                     </div>
@@ -154,27 +155,28 @@
               </div>
 
               <!-- delete child modal -->
-              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete Child</button>
+              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete A Child</button>
               <div class="modal fade" id="deleteChildModal" tabindex="-1" role="dialog" aria-labelledby="deleteChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="deleteChildModalLabel">Delete Child</h5>
+                      <h5 class="modal-title" id="deleteChildModalLabel">Delete A Child</h5>
                       <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
                     <div class="modal-body">
                       <form id="delete-child">
-                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Delete Child</button>
+                        <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="find-child"> -->
+                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="find-child">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Delete A Child</button>
                       </form>
                     </div>
                   </div>
                 </div>
               </div>
                 <!--  change password modal -->
-              <button class="btn btn-outline-success btn-lg" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button>
+              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button>
               <div class="modal fade" id="pwModal" tabindex="-1" role="dialog" aria-labelledby="pwModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -195,7 +197,7 @@
                 </div>
               </div>
               <form id="sign-out">
-                <button class="btn btn-outline-success btn-lg btn-block" type="submit">Sign Out</button>
+                <button class="btn btn-outline-info btn-lg btn-block" type="submit">Sign Out</button>
               </form>
             </div>
           </div>
@@ -211,6 +213,12 @@
               <h5 id="display-children"></h5>
               <h5 id="display-find"></h5>
               <h5 id="delete-message"></h5>
+              <ul class="list-group list-group-horizontal-md" id="myList">
+                <li class="list-group-item" id="myListName">Name:</li>
+                <li class="list-group-item" id="myListDob">D.O.B:</li>
+                <li class="list-group-item" id="myListBw">Birth Weight:</li>
+                <li class="list-group-item" id="myListBl">Birth Length:</li>
+              </ul>
             </div>
           </div>
         </div>

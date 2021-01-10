@@ -21,6 +21,7 @@ const signInSuccess = function (response) {
   // Give that key a value of 'response.user'
   store.user = response.user
   $('.sign-in-message').text(`Welcome Back ${store.user.email}!`)
+  $('#myList').hide()
 }
 
 const signInFailure = function (error) {
