@@ -97,7 +97,7 @@
                     <div class="modal-body">
                       <form id="create-children">
                         <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children">
-                        <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="create-children">
+                        <input name="child[dob]" type="date" placeholder="date of birth" onfocus="(this.type='date')" onblur="(this.type='text')"aria-label="create-children">
                         <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children">
                         <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Child</button>
@@ -253,9 +253,25 @@
             </nav>
             <div class="container-fluid">
               <h4 class="sign-in-message"></h4>
-              <h5 id="display-children"></h5>
-              <h5 id="display-find"></h5>
               <h5 id="delete-message"></h5>
+              <h5 id="update-message"></h5>
+
+              <!-- find one child and display proto  -->
+              <h5 id="display-find"></h5>
+              <div class="jumbotron jumbo-one">
+              <div class="display-one">
+              <ul class="list-group list-group-horizontal-md" id="oneList">
+                <li class="list-group-item" id="myListName">Name:</li>
+                <li class="list-group-item" id="myListDob">D.O.B:</li>
+                <li class="list-group-item" id="myListBw">Birth Weight:</li>
+                <li class="list-group-item" id="myListBl">Birth Length:</li>
+              </ul>
+              </div>
+              </div>
+
+              <!-- Display all children -->
+              <h5 id="display-children"></h5>
+              <div class="jumbotron jumbo-two">
               <div class="display-children">
               <ul class="list-group list-group-horizontal-md" id="myList">
                 <li class="list-group-item" id="myListName">Name:</li>
@@ -263,6 +279,7 @@
                 <li class="list-group-item" id="myListBw">Birth Weight:</li>
                 <li class="list-group-item" id="myListBl">Birth Length:</li>
               </ul>
+              </div>
               </div>
             </div>
           </div>

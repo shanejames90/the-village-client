@@ -20,7 +20,10 @@ const signInSuccess = function (response) {
   // Create a new key on the 'store' object
   // Give that key a value of 'response.user'
   store.user = response.user
+  $('.jumbo-two').hide()
+  $('.jumbo-one').hide()
   $('.display-children').hide()
+  $('.display-one').hide()
   $('.sign-in-message').text(`Welcome Back ${store.user.firstName}!`)
   // $('.sign-in-message').text(`Welcome Back ${store.user.email}!`)
   $('form').trigger('reset')

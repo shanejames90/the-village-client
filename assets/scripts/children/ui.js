@@ -18,46 +18,61 @@ const createChildrenFailure = function (error) {
 }
 
 const indexChildrenSuccess = function (response) {
-  console.log(response)
   const allChildren = response.children
   let allListHTML = ''
   allChildren.forEach(myChild => {
     const myChildHTML = (`
-      <ul class="list-group list-group-horizontal-md" id="myList">
-        <li class="list-group-item" id="myListName">Name: ${myChild.name}</li>
-        <li class="list-group-item" id="myListDob">Date of Birth: ${myChild.dob}</li>
-      </ul>`)
+        <ul class="list-group list-group-horizontal-md" id="myList">
+          <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${myChild.name}</li>
+          <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${myChild.dob}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight:</h5> ${myChild.birthWeight}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length:</h5> ${myChild.birthLength}</li>
+        </ul>
+      `)
     allListHTML += myChildHTML
   })
+  $('.jumbo-two').show()
   $('.display-children').show()
   $('.display-children').html(allListHTML)
+  $('#display-children').text('Successfully Found Your Children!')
 }
 
 const indexChildrenFailure = function (error) {
-  $('.sign-in-message').text('failed with error: ' + error.responseJSON.message)
+  $('#display-children').text('failed with error: ' + error.responseJSON.message)
 }
 
 const updateChildrenSuccess = function (response) {
-  $('.sign-in-message').text('Successfully Updated')
+  $('#update-message').text('Successfully Updated')
   $('form').trigger('reset')
 }
 
 const updateChildrenFailure = function (error) {
-  $('.sign-in-message').text('failed with error: ' + error.responseJSON.message)
+  $('#update-message').text('failed with error: ' + error.responseJSON.message)
 }
 
 const findChildSuccess = function (response) {
   // store response resource in a variable
   const foundChild = response.child
   // turn to string
-  const foundString = JSON.stringify({ foundChild })
-  $('.sign-in-message').text('Successfully Found Child!')
-  $('#display-find').text(foundString)
+  // const foundString = JSON.stringify({ foundChild })
+  const myChildHTML = (`
+        <ul class="list-group list-group-horizontal-md" id="oneList">
+          <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${foundChild.name}</li>
+          <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${foundChild.dob}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight:</h5> ${foundChild.birthWeight}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length:</h5> ${foundChild.birthLength}</li>
+        </ul>
+      `)
+  $('.jumbo-one').show()
+  $('.display-one').show()
+  $('.display-one').html(myChildHTML)
+  $('#display-find').text('Successfully Found Child!')
+  // $('#display-find').text(foundString)
   $('form').trigger('reset')
 }
 
 const findChildFailure = function (error) {
-  $('.sign-in-message').text('failed with error: ' + error.responseJSON.message)
+  $('#display-find').text('failed with error: ' + error.responseJSON.message)
 }
 
 const deleteChildSuccess = function (response) {
