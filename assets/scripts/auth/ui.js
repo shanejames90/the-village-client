@@ -24,8 +24,11 @@ const signInSuccess = function (response) {
   $('.jumbo-one').hide()
   $('.display-children').hide()
   $('.display-one').hide()
+  $('.sign-out-message').hide()
+  $('.sign-in-message').show()
   $('.sign-in-message').text(`Welcome Back ${store.user.firstName}!`)
   // $('.sign-in-message').text(`Welcome Back ${store.user.email}!`)
+  $('#changepw-message').hide()
   $('form').trigger('reset')
 }
 
@@ -34,18 +37,28 @@ const signInFailure = function (error) {
 }
 
 const signOutSuccess = function () {
-  $('.sign-up-message').text('Hurry back to The Village!')
+  $('.sign-out-message').show()
+  $('.sign-out-message').text('Hurry back to The Village!')
   store.user = null
   // Reset form:
   $('form').trigger('reset')
+  $('.sign-in-message').hide()
+  $('.create-child-message').hide()
+  $('#display-children').hide()
+  $('#update-message').hide()
+  $('#display-find').hide()
+  $('#delete-message').hide()
+  $('#changepw-message').hide()
 }
 
 const signOutFailure = function (error) {
-  $('.sign-up-message').text('Sign out fail: ' + error.responseJSON.message)
+  $('.sign-out-message').text('Sign out fail: ' + error.responseJSON.message)
 }
 
 const changePasswordSuccess = function () {
-  $('.sign-in-message').text('Password changed successfully!')
+  $('#changepw-message').show()
+  $('.sign-in-message').hide()
+  $('#changepw-message').text('Password changed successfully!')
   $('form').trigger('reset')
 }
 

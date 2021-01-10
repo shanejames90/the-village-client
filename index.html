@@ -38,6 +38,8 @@
         </div>
 
       <h4 class="sign-up-message"></h4>
+      <h4 class="sign-out-message"></h4>
+
       <button type="button" class="btn btn-primary btn-lg" id="center-this" data-toggle="modal" data-target="#exampleModal" data-whatever="">Join The Village</button>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -239,9 +241,12 @@
                   </div>
                 </div>
               </div>
+
+              <!-- Sign out -->
               <form id="sign-out">
                 <button class="btn btn-outline-info btn-lg btn-block" type="submit">Sign Out</button>
               </form>
+
             </div>
           </div>
           <div id="page-content-wrapper">
@@ -253,8 +258,10 @@
             </nav>
             <div class="container-fluid">
               <h4 class="sign-in-message"></h4>
+              <h5 id="create-child-message"></h5>
               <h5 id="delete-message"></h5>
               <h5 id="update-message"></h5>
+              <h5 id="changepw-message"></h5>
 
               <!-- find one child and display proto  -->
               <h5 id="display-find"></h5>
@@ -271,6 +278,7 @@
 
               <!-- Display all children -->
               <h5 id="display-children"></h5>
+
               <div class="jumbotron jumbo-two">
               <div class="display-children">
               <ul class="list-group list-group-horizontal-md" id="myList">

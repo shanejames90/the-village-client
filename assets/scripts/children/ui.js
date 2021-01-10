@@ -7,8 +7,11 @@ const store = require('./../store')
 const createChildrenSuccess = function (data) {
   // This generates a new game id when New Game button is hit.
   store.child = data.child
-  $('.sign-in-message').text(`${store.child.name} successfully added to The Village!`)
+  $('.create-child-message').show()
+  $('.create-child-message').text(`${store.child.name} successfully added to The Village!`)
   $('form').trigger('reset')
+  $('.sign-in-message').hide()
+  $('#changepw-message').hide()
 }
 
 // The ajax function's .catch
@@ -33,6 +36,8 @@ const indexChildrenSuccess = function (response) {
   })
   $('.jumbo-two').show()
   $('.display-children').show()
+  $('.sign-in-message').hide()
+  $('#changepw-message').hide()
   $('.display-children').html(allListHTML)
   $('#display-children').text('Successfully Found Your Children!')
 }
@@ -42,6 +47,8 @@ const indexChildrenFailure = function (error) {
 }
 
 const updateChildrenSuccess = function (response) {
+  $('.sign-in-message').hide()
+  $('#changepw-message').hide()
   $('#update-message').text('Successfully Updated')
   $('form').trigger('reset')
 }
@@ -65,6 +72,8 @@ const findChildSuccess = function (response) {
       `)
   $('.jumbo-one').show()
   $('.display-one').show()
+  $('.sign-in-message').hide()
+  $('#changepw-message').hide()
   $('.display-one').html(myChildHTML)
   $('#display-find').text('Successfully Found Child!')
   // $('#display-find').text(foundString)
@@ -76,6 +85,8 @@ const findChildFailure = function (error) {
 }
 
 const deleteChildSuccess = function (response) {
+  $('.sign-in-message').hide()
+  $('#changepw-message').hide()
   $('#delete-message').text('Successfully Deleted!')
   $('form').trigger('reset')
 }
