@@ -20,12 +20,17 @@ const signInSuccess = function (response) {
   // Create a new key on the 'store' object
   // Give that key a value of 'response.user'
   store.user = response.user
+  $('#update-message').hide()
   $('.jumbo-two').hide()
   $('.jumbo-one').hide()
   $('.display-children').hide()
+  $('#display-children').hide()
   $('.display-one').hide()
+  $('#create-child-message').hide()
   $('.sign-out-message').hide()
   $('.sign-in-message').show()
+  $('#display-find').hide()
+  $('#delete-message').hide()
   $('.sign-in-message').text(`Welcome Back ${store.user.firstName}!`)
   // $('.sign-in-message').text(`Welcome Back ${store.user.email}!`)
   $('#changepw-message').hide()
@@ -42,13 +47,19 @@ const signOutSuccess = function () {
   store.user = null
   // Reset form:
   $('form').trigger('reset')
+  $('#update-message').hide()
   $('.sign-in-message').hide()
-  $('.create-child-message').hide()
   $('#display-children').hide()
   $('#update-message').hide()
   $('#display-find').hide()
+  $('.jumbo-two').hide()
   $('#delete-message').hide()
   $('#changepw-message').hide()
+  $('#create-child-message').hide()
+  $('.jumbo-one').hide()
+  $('.display-one').hide()
+  $('#display-find').hide()
+  $('#delete-message').hide()
 }
 
 const signOutFailure = function (error) {
@@ -57,7 +68,15 @@ const signOutFailure = function (error) {
 
 const changePasswordSuccess = function () {
   $('#changepw-message').show()
+  $('#update-message').hide()
+  $('#create-child-message').hide()
+  $('.jumbo-two').hide()
   $('.sign-in-message').hide()
+  $('#display-children').hide()
+  $('.jumbo-one').hide()
+  $('.display-one').hide()
+  $('#display-find').hide()
+  $('#delete-message').hide()
   $('#changepw-message').text('Password changed successfully!')
   $('form').trigger('reset')
 }
