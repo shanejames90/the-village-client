@@ -180,6 +180,44 @@
   background-size: cover;
 }
 
+.jumbo-signout {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+
+  // BLUR EFFECT
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.jumbo-signoutbg {
+  // BLUR BG AFFECT PROTO
+  background-image: url('https://www.wallpaperflare.com/static/326/300/995/kananaskis-sunrise-water-purple-wallpaper.jpg');
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  /* Full height */
+  height: 300px;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // .parallax {
 //   /* The image used */
 //   background-image: url("https://www.jetsetter.com/wp-content/uploads/sites/7/2018/04/dPcwW9iI-1380x1035.jpeg");
@@ -257,7 +295,6 @@
   margin: 100px auto;
   background: white;
   border-radius: 5px;
-  // background-color: #5c2018;
 
   background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
   color: white;
@@ -283,10 +320,14 @@
   margin: 100px auto;
   background: white;
   border-radius: 5px;
-  background-color: #5c2018
+
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-#myListName, #myListDob, #myListBw, #myListBl {
+#myListName, #myListDob, #myListBw, #myListBl, #oneList {
   background-color: rgba(173, 216, 230 ,0.65);
   color: #883000;
   font-weight: bold;

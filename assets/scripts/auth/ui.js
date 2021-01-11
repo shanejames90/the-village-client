@@ -39,6 +39,8 @@ const signInSuccess = function (response) {
   $('.jumbo-addc').hide()
   $('.jumbo-addcbg').hide()
   $('.sign-out-message').hide()
+  $('.jumbo-signoutbg').hide()
+  $('.jumbo-signout').hide()
   $('.sign-in-message').show()
   $('.jumbo-signin').show()
   $('.jumbo-signinbg').show()
@@ -61,7 +63,9 @@ const signInFailure = function (error) {
 
 const signOutSuccess = function () {
   $('.sign-out-message').show()
-  $('.sign-out-message').text('Hurry back to The Village!')
+  $('.jumbo-signoutbg').show()
+  $('.jumbo-signout').show()
+  $('.sign-out-message').text('See you soon!')
   store.user = null
   // Reset form:
   $('form').trigger('reset')

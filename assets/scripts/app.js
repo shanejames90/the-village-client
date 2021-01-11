@@ -12,6 +12,9 @@ $(() => {
   $('.jumbo-signup').hide()
   $('.jumbo-signupbg').hide()
   $('.authenticated').hide()
+  $('.sign-out-message').hide()
+  $('.jumbo-signoutbg').hide()
+  $('.jumbo-signout').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#menu-toggle').click(function (e) {
