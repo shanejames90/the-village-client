@@ -31,7 +31,7 @@
                 <form id="sign-in">
                   <input name="credentials[email]" type="text" placeholder="email" aria-label="sign-in">
                   <input name="credentials[password]" type="password" placeholder="password" aria-label="sign-in">
-                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign In</button>
+                  <button class="btn btn-outline-info btn-md" type="submit">Sign In</button>
                 </form>
             </div>
           </div>
@@ -42,7 +42,7 @@
             <h1 class="welcome-message">Welcome to The Village</h1>
           </nav>
         </div>
-
+      <div class="parallax"></div>
       <h4 class="sign-up-message"></h4>
       <h4 class="sign-out-message"></h4>
 
@@ -92,7 +92,7 @@
             <div class="list-group list-group-flush">
 
               <!-- add child modal -->
-              <button class="btn btn-outline-info btn-lg" id="but1" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child<i class="fas fa-child"></i></button>
+              <span data-toggle="tooltip" data-placement="right" title="Add A Child"><button class="btn btn-outline-info btn-lg" id="but1" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child<i class="fas fa-child"></i></button></span>
               <div class="modal fade" id="addChildModal" tabindex="-1" role="dialog" aria-labelledby="addChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -120,11 +120,11 @@
               </div>
 
               <form id="index-children">
-                <button class="btn btn-outline-info btn-lg btn-block" id="but2" type="submit">Show Children<i class="fas fa-user-friends"></i></button>
+                <span data-toggle="tooltip" data-placement="right" title="Show Children"><button class="btn btn-outline-info btn-lg btn-block" id="but2" type="submit">Show Children<i class="fas fa-user-friends"></i></button></span>
               </form>
 
               <!-- update child modal -->
-              <button class="btn btn-outline-info btn-lg" id="but3" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child<i class="fas fa-user-edit"></i></button>
+              <span data-toggle="tooltip" data-placement="right" title="Update Your Child"><button class="btn btn-outline-info btn-lg" id="but3" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child<i class="fas fa-user-edit"></i></button></span>
               <div class="modal fade" id="updateChildModal" tabindex="-1" role="dialog" aria-labelledby="updateChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -192,7 +192,7 @@
               </div> -->
 
               <!-- find a child modal -->
-              <button class="btn btn-outline-info btn-lg" id="but4" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child<i class="fas fa-search"></i></button>
+              <span data-toggle="tooltip" data-placement="right" title="Find Your Child"><button class="btn btn-outline-info btn-lg" id="but4" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child<i class="fas fa-search"></i></button></span>
               <div class="modal fade" id="findChildModal" tabindex="-1" role="dialog" aria-labelledby="findChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -214,7 +214,7 @@
               </div>
 
               <!-- delete child modal -->
-              <button class="btn btn-outline-info btn-lg" id="but5" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete A Child<i class="fas fa-user-minus"></i></button>
+              <span data-toggle="tooltip" data-placement="right" title="Delte A Child"><button class="btn btn-outline-info btn-lg" id="but5" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete A Child<i class="fas fa-user-minus"></i></button></span>
               <div class="modal fade" id="deleteChildModal" tabindex="-1" role="dialog" aria-labelledby="deleteChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -265,7 +265,7 @@
           </div>
             <!-- NAV BAR -->
           <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="top-nav">
               <button class="btn btn-primary" id="menu-toggle"><i class="fa fa-bars"></i></button>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="glyphicon glyphicon-list"></span>
@@ -274,7 +274,7 @@
                 <div class="btn-group open" id="nav-dropdown">
                 <!-- <a class="btn btn-outline-info"><i class="icon-user"></i> User</a> -->
                 <a class="btn btn-dark dropdown-toggle" data-toggle="dropdown" href="#">
-                  <span class="icon-caret-down"></span></a>
+                   <span class="icon-caret-down"></span></a>
                 <ul class="dropdown-menu">
                   <li><a class="btn btn-light" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever=""><i class="fas fa-cog"></i>Change Password</a></li>
                   <!-- <li class="divider"></li> -->

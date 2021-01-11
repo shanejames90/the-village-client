@@ -5,6 +5,7 @@ const store = require('./../store')
 // The ajax function's .then
 // will pass this funciton a response object from the API
 const signUpSuccess = function (response) {
+  $('.sign-up-message').show()
   $('.sign-up-message').text('Signed up successfully! Welcome to The Village!')
   $('form').trigger('reset')
 }
@@ -12,6 +13,7 @@ const signUpSuccess = function (response) {
 // The ajax function's .catch
 // will pass this funciton an error object
 const signUpFailure = function (error) {
+  $('.sign-up-message').show()
   $('.sign-up-message').text('Sign up failed with error: ' + error.responseJSON.message)
 }
 
@@ -23,6 +25,7 @@ const signInSuccess = function (response) {
   $('#update-message').hide()
   $('.jumbo-two').hide()
   $('.jumbo-one').hide()
+  $('.sign-up-message').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('.display-one').hide()
@@ -38,6 +41,7 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function (error) {
+  $('.sign-up-message').hide()
   $('.sign-up-message').text('Sign in failed with error: ' + error.responseJSON.message)
 }
 
@@ -60,6 +64,7 @@ const signOutSuccess = function () {
   $('.display-one').hide()
   $('#display-find').hide()
   $('#delete-message').hide()
+  $('.sign-up-message').hide()
 }
 
 const signOutFailure = function (error) {
