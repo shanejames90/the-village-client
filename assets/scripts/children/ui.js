@@ -12,15 +12,19 @@ const createChildrenSuccess = function (data) {
   $('#create-child-message').text(`${store.child.name} is now a Villager!`)
   $('form').trigger('reset')
   $('.sign-in-message').hide()
+  $('.jumbo-signin').hide()
   $('.jumbo-two').hide()
   $('#display-children').hide()
   $('.display-children').hide()
   $('#changepw-message').hide()
+  $('.jumbo-updatepw').hide()
   $('#update-message').hide()
+  $('.jumbo-updatec').hide()
   $('.jumbo-one').hide()
   $('.display-one').hide()
   $('#display-find').hide()
   $('#delete-message').hide()
+  $('.jumbo-deletec').hide()
 }
 
 // The ajax function's .catch
@@ -52,13 +56,17 @@ const indexChildrenSuccess = function (response) {
   $('.display-one').hide()
   $('#display-find').hide()
   $('#update-message').hide()
+  $('.jumbo-updatec').hide()
   $('.sign-in-message').hide()
+  $('.jumbo-signin').hide()
   $('#changepw-message').hide()
+  $('.jumbo-updatepw').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
   $('#delete-message').hide()
+  $('.jumbo-deletec').hide()
   $('.display-children').html(allListHTML)
-  $('#display-children').text('Successfully Found Your Children!')
+  $('#display-children').text('Here are all your little beauties:')
 }
 
 const indexChildrenFailure = function (error) {
@@ -68,8 +76,10 @@ const indexChildrenFailure = function (error) {
 
 const updateChildrenSuccess = function (response) {
   $('.sign-in-message').hide()
+  $('.jumbo-signin').hide()
   $('.jumbo-two').hide()
   $('#changepw-message').hide()
+  $('.jumbo-updatepw').hide()
   $('.jumbo-one').hide()
   $('.display-one').hide()
   $('#display-find').hide()
@@ -78,13 +88,16 @@ const updateChildrenSuccess = function (response) {
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').hide()
+  $('.jumbo-deletec').hide()
   $('#update-message').show()
-  $('#update-message').text('Successfully Updated')
+  $('.jumbo-updatec').show()
+  // $('#update-message').text('Your little ducky is up to date!')
   $('form').trigger('reset')
 }
 
 const updateChildrenFailure = function (error) {
   $('#update-message').show()
+  $('.jumbo-updatec').show()
   $('#update-message').text('failed with error: ' + error.responseJSON.message)
 }
 
@@ -105,16 +118,20 @@ const findChildSuccess = function (response) {
   $('.jumbo-two').hide()
   $('.display-one').show()
   $('#update-message').hide()
+  $('.jumbo-updatec').hide()
   $('.sign-in-message').hide()
+  $('.jumbo-signin').hide()
   $('#changepw-message').hide()
+  $('.jumbo-updatepw').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').hide()
+  $('.jumbo-deletec').hide()
   $('#display-find').show()
   $('.display-one').html(myChildHTML)
-  $('#display-find').text('Successfully Found Child!')
+  $('#display-find').text('Here is the little ducky:')
   // $('#display-find').text(foundString)
   $('form').trigger('reset')
 }
@@ -129,20 +146,25 @@ const deleteChildSuccess = function (response) {
   $('.display-one').hide()
   $('#display-find').hide()
   $('.sign-in-message').hide()
+  $('.jumbo-signin').hide()
   $('.jumbo-two').hide()
   $('#update-message').hide()
+  $('.jumbo-updatec').hide()
   $('#changepw-message').hide()
+  $('.jumbo-updatepw').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').show()
-  $('#delete-message').text('Successfully Deleted!')
+  $('.jumbo-deletec').show()
+  $('#delete-message').text('We Miss You Already!')
   $('form').trigger('reset')
 }
 
 const deleteChildFailure = function (error) {
   $('#delete-message').show()
+  $('.jumbo-deletec').show()
   $('#delete-message').text('failed with error: ' + error.responseJSON.message)
 }
 
