@@ -1,7 +1,53 @@
 @import '~bootstrap/scss/bootstrap';
 
+* {
+  box-sizing: border-box;
+}
+
+// PARALLAX PROTO
+
+
 .welcome-message {
   color: #D66853;
+}
+
+.jumbo-signup {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+
+  // BLUR EFFECT
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.jumbo-signupbg {
+  // BLUR BG AFFECT PROTO
+  background-image: url('https://s3-ap-southeast-1.amazonaws.com/tz-mag-media/wp-content/uploads/2020/02/28132311/Canva-Fabulous-mountain-village-with-high-cliffs-and-waterfalls-Lauterbrunnen-Switzerland.jpg');
+  /* Add the blur effect */
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  /* Full height */
+  height: 800px;
+  width: 100vw;
+  top: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
@@ -35,7 +81,35 @@
   0 12.5px 10px rgba(0, 0, 0, 0.06),
   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
+  0 100px 80px rgba(0, 0, 0, 0.12);
+
+  // BLUR EFFECT
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 25%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.jumbo-addcbg {
+  // BLUR BG AFFECT PROTO
+  background-image: url('https://www.thespruce.com/thmb/3icP-Tf1lTO_b-IPMOotdwNO_Uc=/1500x844/smart/filters:no_upscale()/mallard11-59511e483df78cae81214b68.jpg');
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  /* Full height */
+  height: 300px;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .jumbo-deletec {
@@ -75,7 +149,35 @@
   0 12.5px 10px rgba(0, 0, 0, 0.06),
   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
+  0 100px 80px rgba(0, 0, 0, 0.12);
+
+  // BLUR EFFECT
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.6); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 25%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.jumbo-signinbg {
+  // BLUR BG AFFECT PROTO
+  background-image: url('https://www.freevector.com/uploads/vector/preview/19879/Free_Cartoon_Clouds_Vector.png');
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  /* Full height */
+  height: 300px;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 // .parallax {
@@ -155,8 +257,14 @@
   margin: 100px auto;
   background: white;
   border-radius: 5px;
-  background-color: #5c2018
+  // background-color: #5c2018;
+
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
+
 
 .jumbo-one {
   box-shadow:
@@ -179,8 +287,9 @@
 }
 
 #myListName, #myListDob, #myListBw, #myListBl {
-  background-color: #bc4639;
-  color: white
+  background-color: rgba(173, 216, 230 ,0.65);
+  color: #883000;
+  font-weight: bold;
 }
 
 #center-this {
@@ -237,3 +346,6 @@
    margin-left: -12rem;
  }
 }
+
+
+// PROTO MAIN PAGE

@@ -9,6 +9,8 @@ const childrenEvents = require('./children/events')
 
 $(() => {
   // your JS code goes here
+  $('.jumbo-signup').hide()
+  $('.jumbo-signupbg').hide()
   $('.authenticated').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)

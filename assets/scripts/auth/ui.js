@@ -5,8 +5,11 @@ const store = require('./../store')
 // The ajax function's .then
 // will pass this funciton a response object from the API
 const signUpSuccess = function (response) {
+  $('.jumbo-three').hide()
+  $('.jumbo-signup').show()
+  $('.jumbo-signupbg').show()
   $('.sign-up-message').show()
-  $('.sign-up-message').text('Signed up successfully! Welcome to The Village!')
+  $('.sign-up-message').text('Congratulations, you are now apart of The Village! Sign in to your new home!')
   $('form').trigger('reset')
 }
 
@@ -27,18 +30,22 @@ const signInSuccess = function (response) {
   $('.jumbo-two').hide()
   $('.jumbo-one').hide()
   $('.sign-up-message').hide()
+  $('.jumbo-signup').hide()
+  $('.jumbo-signupbg').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('.display-one').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
+  $('.jumbo-addcbg').hide()
   $('.sign-out-message').hide()
   $('.sign-in-message').show()
   $('.jumbo-signin').show()
+  $('.jumbo-signinbg').show()
   $('#display-find').hide()
   $('#delete-message').hide()
   $('.jumbo-deletec').hide()
-  $('.sign-in-message').text(`Welcome Back ${store.user.firstName}!`)
+  $('.sign-in-message').text(`Welcome, ${store.user.firstName}!`)
   // $('.sign-in-message').text(`Welcome Back ${store.user.email}!`)
   $('#changepw-message').hide()
   $('.jumbo-updatepw').hide()
@@ -47,6 +54,8 @@ const signInSuccess = function (response) {
 
 const signInFailure = function (error) {
   $('.sign-up-message').hide()
+  $('.jumbo-signup').hide()
+  $('.jumbo-signupbg').hide()
   $('.sign-up-message').text('Sign in failed with error: ' + error.responseJSON.message)
 }
 
@@ -58,6 +67,7 @@ const signOutSuccess = function () {
   $('form').trigger('reset')
   $('.sign-in-message').hide()
   $('.jumbo-signin').hide()
+  $('.jumbo-signinbg').hide()
   $('#display-children').hide()
   $('#update-message').hide()
   $('.jumbo-updatec').hide()
@@ -67,12 +77,16 @@ const signOutSuccess = function () {
   $('.jumbo-updatepw').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
+  $('.jumbo-addcbg').hide()
   $('.jumbo-one').hide()
   $('.display-one').hide()
   $('#display-find').hide()
   $('#delete-message').hide()
   $('.jumbo-deletec').hide()
   $('.sign-up-message').hide()
+  $('.jumbo-signup').hide()
+  $('.jumbo-signupbg').hide()
+  $('.jumbo-three').hide()
 }
 
 const signOutFailure = function (error) {
@@ -86,9 +100,11 @@ const changePasswordSuccess = function () {
   $('.jumbo-updatec').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
+  $('.jumbo-addcbg').hide()
   $('.jumbo-two').hide()
   $('.sign-in-message').hide()
   $('.jumbo-signin').hide()
+  $('.jumbo-signinbg').hide()
   $('#display-children').hide()
   $('.jumbo-one').hide()
   $('.display-one').hide()

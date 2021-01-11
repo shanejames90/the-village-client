@@ -9,10 +9,12 @@ const createChildrenSuccess = function (data) {
   store.child = data.child
   $('#create-child-message').show()
   $('.jumbo-addc').show()
+  $('.jumbo-addcbg').show()
   $('#create-child-message').text(`${store.child.name} is now a Villager!`)
   $('form').trigger('reset')
   $('.sign-in-message').hide()
   $('.jumbo-signin').hide()
+  $('.jumbo-signinbg').hide()
   $('.jumbo-two').hide()
   $('#display-children').hide()
   $('.display-children').hide()
@@ -40,12 +42,12 @@ const indexChildrenSuccess = function (response) {
   let allListHTML = ''
   allChildren.forEach(myChild => {
     const myChildHTML = (`
-        <ul class="list-group list-group-horizontal-md" id="myList" data-header="Your Children">
-          <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${myChild.name}</li>
-          <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${myChild.dob}</li>
-          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight(lbs):</h5> ${myChild.birthWeight}</li>
-          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length(in.):</h5> ${myChild.birthLength}</li>
-        </ul>
+      <ul class="list-group list-group-horizontal-md" id="myList" data-header="Your Children">
+        <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${myChild.name}</li>
+        <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${myChild.dob}</li>
+        <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight(lbs):</h5> ${myChild.birthWeight}</li>
+        <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length(in.):</h5> ${myChild.birthLength}</li>
+      </ul>
       `)
     allListHTML += myChildHTML
   })
@@ -59,10 +61,12 @@ const indexChildrenSuccess = function (response) {
   $('.jumbo-updatec').hide()
   $('.sign-in-message').hide()
   $('.jumbo-signin').hide()
+  $('.jumbo-signinbg').hide()
   $('#changepw-message').hide()
   $('.jumbo-updatepw').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
+  $('.jumbo-addcbg').hide()
   $('#delete-message').hide()
   $('.jumbo-deletec').hide()
   $('.display-children').html(allListHTML)
@@ -77,6 +81,7 @@ const indexChildrenFailure = function (error) {
 const updateChildrenSuccess = function (response) {
   $('.sign-in-message').hide()
   $('.jumbo-signin').hide()
+  $('.jumbo-signinbg').hide()
   $('.jumbo-two').hide()
   $('#changepw-message').hide()
   $('.jumbo-updatepw').hide()
@@ -85,6 +90,7 @@ const updateChildrenSuccess = function (response) {
   $('#display-find').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
+  $('.jumbo-addcbg').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').hide()
@@ -121,10 +127,12 @@ const findChildSuccess = function (response) {
   $('.jumbo-updatec').hide()
   $('.sign-in-message').hide()
   $('.jumbo-signin').hide()
+  $('.jumbo-signinbg').hide()
   $('#changepw-message').hide()
   $('.jumbo-updatepw').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
+  $('.jumbo-addcbg').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').hide()
@@ -147,6 +155,7 @@ const deleteChildSuccess = function (response) {
   $('#display-find').hide()
   $('.sign-in-message').hide()
   $('.jumbo-signin').hide()
+  $('.jumbo-signinbg').hide()
   $('.jumbo-two').hide()
   $('#update-message').hide()
   $('.jumbo-updatec').hide()
@@ -154,6 +163,7 @@ const deleteChildSuccess = function (response) {
   $('.jumbo-updatepw').hide()
   $('#create-child-message').hide()
   $('.jumbo-addc').hide()
+  $('.jumbo-addcbg').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').show()
