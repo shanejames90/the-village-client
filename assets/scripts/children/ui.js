@@ -8,7 +8,8 @@ const createChildrenSuccess = function (data) {
   // This generates a new game id when New Game button is hit.
   store.child = data.child
   $('#create-child-message').show()
-  $('#create-child-message').text(`${store.child.name} successfully added to The Village!`)
+  $('.jumbo-addc').show()
+  $('#create-child-message').text(`${store.child.name} is now a Villager!`)
   $('form').trigger('reset')
   $('.sign-in-message').hide()
   $('.jumbo-two').hide()
@@ -26,6 +27,7 @@ const createChildrenSuccess = function (data) {
 // will pass this funciton an error object
 const createChildrenFailure = function (error) {
   $('#create-child-message').show()
+  $('.jumbo-addc').show()
   $('.sign-in-message').text('Sign up failed with error: ' + error.responseJSON.message)
 }
 
@@ -34,7 +36,7 @@ const indexChildrenSuccess = function (response) {
   let allListHTML = ''
   allChildren.forEach(myChild => {
     const myChildHTML = (`
-        <ul class="list-group list-group-horizontal-md" id="myList">
+        <ul class="list-group list-group-horizontal-md" id="myList" data-header="Your Children">
           <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${myChild.name}</li>
           <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${myChild.dob}</li>
           <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight(lbs):</h5> ${myChild.birthWeight}</li>
@@ -53,6 +55,7 @@ const indexChildrenSuccess = function (response) {
   $('.sign-in-message').hide()
   $('#changepw-message').hide()
   $('#create-child-message').hide()
+  $('.jumbo-addc').hide()
   $('#delete-message').hide()
   $('.display-children').html(allListHTML)
   $('#display-children').text('Successfully Found Your Children!')
@@ -71,6 +74,7 @@ const updateChildrenSuccess = function (response) {
   $('.display-one').hide()
   $('#display-find').hide()
   $('#create-child-message').hide()
+  $('.jumbo-addc').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').hide()
@@ -104,6 +108,7 @@ const findChildSuccess = function (response) {
   $('.sign-in-message').hide()
   $('#changepw-message').hide()
   $('#create-child-message').hide()
+  $('.jumbo-addc').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').hide()
@@ -128,6 +133,7 @@ const deleteChildSuccess = function (response) {
   $('#update-message').hide()
   $('#changepw-message').hide()
   $('#create-child-message').hide()
+  $('.jumbo-addc').hide()
   $('.display-children').hide()
   $('#display-children').hide()
   $('#delete-message').show()

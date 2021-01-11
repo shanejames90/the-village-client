@@ -1,23 +1,56 @@
 @import '~bootstrap/scss/bootstrap';
 
 .welcome-message {
-  color: #D66853
+  color: #D66853;
 }
 
 
-.parallax {
-  /* The image used */
-  background-image: url("https://www.jetsetter.com/wp-content/uploads/sites/7/2018/04/dPcwW9iI-1380x1035.jpeg");
+.jumbo-three {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+;
 
-  /* Full height */
-  height: 100%;
 
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  height: 10%;
+  width: 80%;
+  // margin: 100px auto;
+  margin-left:10%;
+  margin-right:40%;
+  margin-top:10%;
+  margin-botton:20%;
+  background: white;
+  border-radius: 5px;
 }
+
+.jumbo-addc {
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+// .parallax {
+//   /* The image used */
+//   background-image: url("https://www.jetsetter.com/wp-content/uploads/sites/7/2018/04/dPcwW9iI-1380x1035.jpeg");
+//
+//   /* Full height */
+//   height: 100%;
+//
+//   /* Create the parallax scrolling effect */
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+// }
 
 #but1 {
   width: 100%;
@@ -124,7 +157,6 @@
 }
 
 #sidebar-wrapper {
- box-shadow: 0 8px 6px -6px black;
  min-height: 100vh;
  margin-left: -15rem;
  -webkit-transition: margin .25s ease-out;

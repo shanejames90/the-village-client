@@ -39,19 +39,21 @@
             <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContentUnauth" aria-controls="navbarToggleExternalContentUnauth" aria-expanded="false" aria-label="Toggle navigation">
               <span>Returning Villagers</span>
             </button>
-            <h1 class="welcome-message">Welcome to The Village</h1>
+            <h1 class="welcome-message">Welcome to The Village<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h1>
           </nav>
         </div>
       <div class="parallax"></div>
       <h4 class="sign-up-message"></h4>
       <h4 class="sign-out-message"></h4>
 
+      <div class="jumbotron jumbo-three">
       <button type="button" class="btn btn-primary btn-lg" id="center-this" data-toggle="modal" data-target="#exampleModal" data-whatever="">Join The Village</button>
+      </div>
       <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Sign Up</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Sign Up<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
               <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -75,8 +77,8 @@
                     <input name="credentials[password_confirmation]" class="form-control" id="confirm-password" type="password" placeholder="confirm password" aria-label="sign-up">
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-success my-2 my-sm-0" data-dismiss="modal">Close</button>
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Up</button>
+                    <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-dismiss="modal">Close</button>
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Sign Up</button>
                   </div>
                 </form>
             </div>
@@ -97,7 +99,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="addChildModalLabel">Add Child</h5>
+                      <h5 class="modal-title" id="addChildModalLabel">Add Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
                       <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -112,7 +114,7 @@
                         <div class="input group">
                         <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children"><span class="input-group-addon">in.</span>
                         </div>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Child</button>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Add Child</button>
                       </form>
                     </div>
                   </div>
@@ -129,7 +131,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="updateChildModalLabel">Update Child</h5>
+                      <h5 class="modal-title" id="updateChildModalLabel">Update Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
                       <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -145,7 +147,7 @@
                         <div class="input group">
                         <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="update-children"><span class="input-group-addon">in.</span>
                         </div>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Update Child</button>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Update Child</button>
                       </form>
                     </div>
                   </div>
@@ -197,7 +199,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="findChildModalLabel">Find Your Child</h5>
+                      <h5 class="modal-title" id="findChildModalLabel">Find Your Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
                       <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -206,7 +208,7 @@
                       <form id="find-child">
                         <input name="child[firstName]" type="text" placeholder="first name" aria-label="find-child">
                         <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="find-child"> -->
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Find</button>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Find</button>
                       </form>
                     </div>
                   </div>
@@ -219,7 +221,7 @@
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="deleteChildModalLabel">Delete A Child</h5>
+                      <h5 class="modal-title" id="deleteChildModalLabel">Delete A Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
                       <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -228,7 +230,7 @@
                       <form id="delete-child">
                         <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="find-child"> -->
                         <input name="child[firstName]" type="text" placeholder="first name" aria-label="find-child">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Delete A Child</button>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Delete A Child</button>
                       </form>
                     </div>
                   </div>
@@ -249,7 +251,7 @@
                       <form id="change-password">
                         <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password">
                         <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Change Password</button>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Change Password</button>
                       </form>
                     </div>
                   </div>
@@ -283,11 +285,22 @@
                   </form>
                 </ul>
               </div>
+              <span><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></span>
             </nav>
             <div class="container-fluid">
+
               <h4 class="sign-in-message"></h4>
+
+              <!-- ADD ONE CHILD MESSAGING -->
+              <div class="jumbotron jumbo-addc"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>The Village Welcomes You With Open Arms...and Wings</strong>
               <h5 id="create-child-message"></h5>
+              </div>
+
+              <!-- DELETE ONE CHILD MESSAGING -->
+              <div class="jumbotron jumbo-deletec"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>Don't Be A Stranger, Our Wings Are Always Open To You</strong>
               <h5 id="delete-message"></h5>
+              </div>
+
               <h5 id="update-message"></h5>
               <h5 id="changepw-message"></h5>
 
@@ -307,7 +320,7 @@
               <!-- Display all children -->
               <h5 id="display-children"></h5>
 
-              <div class="jumbotron jumbo-two">
+              <div class="jumbotron jumbo-two"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>Your Children:</strong>
               <div class="display-children">
               <ul class="list-group list-group-horizontal-md" id="myList">
                 <li class="list-group-item" id="myListName">Name:</li>
