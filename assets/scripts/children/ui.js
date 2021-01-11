@@ -37,8 +37,8 @@ const indexChildrenSuccess = function (response) {
         <ul class="list-group list-group-horizontal-md" id="myList">
           <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${myChild.name}</li>
           <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${myChild.dob}</li>
-          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight:</h5> ${myChild.birthWeight}</li>
-          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length:</h5> ${myChild.birthLength}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight(lbs):</h5> ${myChild.birthWeight}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length(in.):</h5> ${myChild.birthLength}</li>
         </ul>
       `)
     allListHTML += myChildHTML
@@ -93,8 +93,8 @@ const findChildSuccess = function (response) {
         <ul class="list-group list-group-horizontal-md" id="oneList">
           <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${foundChild.name}</li>
           <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${foundChild.dob}</li>
-          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight:</h5> ${foundChild.birthWeight}</li>
-          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length:</h5> ${foundChild.birthLength}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight(lbs):</h5> ${foundChild.birthWeight}</li>
+          <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length(in.):</h5> ${foundChild.birthLength}</li>
         </ul>
       `)
   $('.jumbo-one').show()

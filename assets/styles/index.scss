@@ -4,9 +4,45 @@
   color: #D66853
 }
 
-#sidebar-wrapper {
-  background-color: #f3e0dc
+#but1 {
+  padding-left: 30%;
 }
+.fa-child {
+  padding-left: 0;
+}
+#but2 {
+  padding-left: 20%;
+}
+.fa-user-friends {
+  padding-left: 0;
+}
+#but3 {
+  padding-left: 9%;
+}
+.fa-user-edit {
+  padding-left: 0;
+}
+#but4 {
+  padding-left: 20%;
+}
+#but5 {
+  padding-left: 22%;
+}
+
+
+.main-logo {
+  display: inline-flex;
+  margin-left: 80%;
+  color: #D66853;
+  padding-left: 10px
+}
+
+#nav-dropdown {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-left: 2px;
+}
+
 
 .jumbo-two {
   background-color: #5c2018
@@ -41,11 +77,11 @@
 
 #sidebar-wrapper .sidebar-heading {
  padding: 0.875rem 1.25rem;
- font-size: 1.2rem;
+ font-size: 1rem;
 }
 
 #sidebar-wrapper .list-group {
- width: 15rem;
+ width: 14rem;
 }
 
 #page-content-wrapper {
@@ -67,6 +103,6 @@
  }
 
  #wrapper.toggled #sidebar-wrapper {
-   margin-left: -15rem;
+   margin-left: -12rem;
  }
 }

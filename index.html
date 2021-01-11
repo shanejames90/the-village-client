@@ -16,6 +16,12 @@
 
       <!-- Custom styles for this template -->
       <link href="css/simple-sidebar.css" rel="stylesheet">
+
+      <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+      <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
+      <!-- Place your kit's code here -->
+      <script src="https://kit.fontawesome.com/d02a534ee8.js" crossorigin="anonymous"></script>
+
     </head>
     <body>
       <div class="unauthenticated">
@@ -82,11 +88,11 @@
       <div class="authenticated">
         <div class="d-flex" id="wrapper">
           <!-- Sidebar -->
-          <div class="bg-light border-right" id="sidebar-wrapper">
+          <div class="bg-dark border-left" id="sidebar-wrapper">
             <div class="list-group list-group-flush">
 
               <!-- add child modal -->
-              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child</button>
+              <button class="btn btn-outline-info btn-lg" id="but1" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child<i class="fas fa-child"></i></button>
               <div class="modal fade" id="addChildModal" tabindex="-1" role="dialog" aria-labelledby="addChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -99,9 +105,13 @@
                     <div class="modal-body">
                       <form id="create-children">
                         <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children">
+                        <div class="input group">
                         <input name="child[dob]" type="date" placeholder="date of birth" onfocus="(this.type='date')" onblur="(this.type='text')"aria-label="create-children">
-                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children">
-                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children">
+                        </div>
+                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children"><span class="input-group-addon">lbs</span>
+                        <div class="input group">
+                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children"><span class="input-group-addon">in.</span>
+                        </div>
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Child</button>
                       </form>
                     </div>
@@ -110,11 +120,11 @@
               </div>
 
               <form id="index-children">
-                <button class="btn btn-outline-info btn-lg btn-block" type="submit">Show Children</button>
+                <button class="btn btn-outline-info btn-lg btn-block" id="but2" type="submit">Show Children<i class="fas fa-user-friends"></i></button>
               </form>
 
               <!-- update child modal -->
-              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child</button>
+              <button class="btn btn-outline-info btn-lg" id="but3" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child<i class="fas fa-user-edit"></i></button>
               <div class="modal fade" id="updateChildModal" tabindex="-1" role="dialog" aria-labelledby="updateChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -128,9 +138,13 @@
                       <form id="update-children">
                         <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="update-children"> -->
                         <input name="child[firstName]" type="text" placeholder="first name" aria-label="update-children">
+                        <div class="input group">
                         <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="update-children">
-                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="update-children">
-                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="update-children">
+                        </div>
+                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="update-children"><span class="input-group-addon">lbs</span>
+                        <div class="input group">
+                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="update-children"><span class="input-group-addon">in.</span>
+                        </div>
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Update Child</button>
                       </form>
                     </div>
@@ -178,7 +192,7 @@
               </div> -->
 
               <!-- find a child modal -->
-              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child</button>
+              <button class="btn btn-outline-info btn-lg" id="but4" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child<i class="fas fa-search"></i></button>
               <div class="modal fade" id="findChildModal" tabindex="-1" role="dialog" aria-labelledby="findChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -200,7 +214,7 @@
               </div>
 
               <!-- delete child modal -->
-              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete A Child</button>
+              <button class="btn btn-outline-info btn-lg" id="but5" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete A Child<i class="fas fa-user-minus"></i></button>
               <div class="modal fade" id="deleteChildModal" tabindex="-1" role="dialog" aria-labelledby="deleteChildModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -221,7 +235,7 @@
                 </div>
               </div>
                 <!--  change password modal -->
-              <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button>
+              <!-- <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button> -->
               <div class="modal fade" id="pwModal" tabindex="-1" role="dialog" aria-labelledby="pwModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
@@ -243,18 +257,32 @@
               </div>
 
               <!-- Sign out -->
-              <form id="sign-out">
+              <!-- <form id="sign-out">
                 <button class="btn btn-outline-info btn-lg btn-block" type="submit">Sign Out</button>
-              </form>
+              </form> -->
 
             </div>
           </div>
+            <!-- NAV BAR -->
           <div id="page-content-wrapper">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-              <button class="btn btn-primary" id="menu-toggle"> <--> </button>
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+              <button class="btn btn-primary" id="menu-toggle"><i class="fa fa-bars"></i></button>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="glyphicon glyphicon-list"></span>
               </button>
+                <strong class="main-logo">The Village</strong>
+                <div class="btn-group open" id="nav-dropdown">
+                <!-- <a class="btn btn-outline-info"><i class="icon-user"></i> User</a> -->
+                <a class="btn btn-dark dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="icon-caret-down"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="btn btn-light" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever=""><i class="fas fa-cog"></i>Change Password</a></li>
+                  <!-- <li class="divider"></li> -->
+                  <form id="sign-out">
+                  <li><a class="btn btn-light btn-lg btn-block" id="sobut" type="submit"><i class="fas fa-power-off"></i>Sign Out</a></li>
+                  </form>
+                </ul>
+              </div>
             </nav>
             <div class="container-fluid">
               <h4 class="sign-in-message"></h4>
@@ -297,6 +325,11 @@
       <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
     <!-- Menu Toggle Script -->
     <!-- <script>
