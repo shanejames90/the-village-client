@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>The Village!</title>
+      <title>The Village</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -17,10 +17,28 @@
       <!-- Custom styles for this template -->
       <link href="css/simple-sidebar.css" rel="stylesheet">
 
+      <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+      </style>
+
+
       <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
       <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet"> -->
       <!-- Place your kit's code here -->
       <script src="https://kit.fontawesome.com/d02a534ee8.js" crossorigin="anonymous"></script>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Merienda+One&display=swap');
+      </style>
+
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Timmana&display=swap');
+      </style>
+
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Numans&family=Timmana&display=swap');
+      </style>
 
     </head>
     <body>
@@ -39,7 +57,7 @@
             <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContentUnauth" aria-controls="navbarToggleExternalContentUnauth" aria-expanded="false" aria-label="Toggle navigation">
               <span>Returning Villagers</span>
             </button>
-            <h1 class="welcome-message">Welcome to The Village<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h1>
+            <h1 class="welcome-message">The Village<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h1>
           </nav>
         </div>
 
@@ -51,7 +69,7 @@
 
       <!-- SING-OUT USER MESSAGING -->
       <div class="jumbotron jumbo-signoutbg"></div>
-      <div class="jumbotron jumbo-signout"><strong>The Village Won't Be The Same Until You Return</strong><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/>
+      <div class="jumbotron jumbo-signout"><strong class="user-msg">The Village Won't Be The Same Until You Return</strong><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/>
       <h4 class="sign-out-message"></h4>
       </div>
 
@@ -98,6 +116,7 @@
         </div>
       </div>
       </div>
+        <div class="mygrade"></div>
       <!-- Beginning of AUTH Events -->
       <div class="authenticated">
         <div class="d-flex" id="wrapper">
@@ -165,45 +184,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- update child modal prototype -->
-              <!-- <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child</button>
-              <div class="modal fade" id="updateChildModal" tabindex="-1" role="dialog" aria-labelledby="updateChildModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="updateChildModalLabel">Update Child</h5>
-                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <form id="update-children">
-                        <div class="form-group">
-                        <label for="updateChildInput">Please enter the name of your child that you would like to update:</label> -->
-                        <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="update-children"> -->
-                        <!-- <input name="child[firstName]" class="form-control" id="updateChildInput" type="text" placeholder="first name" aria-label="update-children">
-                        </div>
-                        <div class="input-group">
-                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">What would you like to update?</button>
-                          <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#">date of birth</a>
-                            <a class="dropdown-item" href="#">birth weight</a>
-                            <a class="dropdown-item" href="#">birth length</a>
-                          </div>
-                        </div>
-                        </div>
-                        <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="update-children">
-                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="update-children">
-                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="update-children">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Update Child</button>
-                      </form> -->
-                    <!-- </div>
-                  </div>
-                </div>
-              </div> -->
 
               <!-- find a child modal -->
               <span data-toggle="tooltip" data-placement="right" title="Find Your Child"><button class="btn btn-outline-info btn-lg" id="but4" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child<i class="fas fa-search"></i></button></span>
@@ -299,37 +279,38 @@
               </div>
               <span><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></span>
             </nav>
+
             <div class="container-fluid">
 
               <!-- SIGN-IN MESSAGING -->
               <div class="jumbo-signinbg"></div>
-              <div class="jumbotron jumbo-signin"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>It Takes A Village To Raise A Child</strong>
+              <div class="jumbotron jumbo-signin"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">It Takes A Village To Raise A Child</strong>
               <h4 class="sign-in-message"></h4>
               </div>
 
               <!-- ADD ONE CHILD MESSAGING -->
               <div class="jumbo-addcbg"></div>
-              <div class="jumbotron jumbo-addc"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>The Village Welcomes You With Open Arms...and Wings</strong>
+              <div class="jumbotron jumbo-addc"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">The Village Welcomes You With Open Arms...and Wings</strong>
               <h5 id="create-child-message"></h5>
               </div>
 
               <!-- DELETE ONE CHILD MESSAGING -->
-              <div class="jumbotron jumbo-deletec"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>Don't Be A Stranger, Our Wings Are Always Open To You</strong>
+              <div class="jumbotron jumbo-deletec"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Don't Be A Stranger, Our Wings Are Always Open To You</strong>
               <h5 id="delete-message"></h5>
               </div>
 
               <!-- UPDATE ONE CHILD MESSAGING -->
-              <div class="jumbotron jumbo-updatec"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>Thank You For Keeping Us In The Loop</strong>
+              <div class="jumbotron jumbo-updatec"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Thank You For Keeping Us In The Loop</strong>
               <h5 id="update-message"></h5>
               </div>
 
               <!-- UPDATE PASSWORD MESSAGING -->
-              <div class="jumbotron jumbo-updatepw"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>Your Village Credentials Are Safe and Sound</strong>
+              <div class="jumbotron jumbo-updatepw"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Your Village Credentials Are Safe and Sound</strong>
               <h5 id="changepw-message"></h5>
               </div>
 
               <!-- find one child and display proto  -->
-              <div class="jumbotron jumbo-one"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>Your Little Ducky Is So Precious</strong>
+              <div class="jumbotron jumbo-one"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Your Little Ducky Is So Precious</strong>
                 <h5 id="display-find"></h5>
               <div class="display-one">
               <ul class="list-group list-group-horizontal-md" id="oneList">
@@ -342,7 +323,7 @@
               </div>
 
               <!-- Display all children -->
-              <div class="jumbotron jumbo-two"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong>Your Little Duckies Are Growing So Fast</strong>
+              <div class="jumbotron jumbo-two"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Your Little Duckies Are Growing So Fast</strong>
                 <h5 id="display-children"></h5>
               <div class="display-children">
               <ul class="list-group list-group-horizontal-md" id="myList">
@@ -357,6 +338,12 @@
           </div>
         </div>
       </div>
+
+      <footer id="cloud-happy">
+        <div id="awan">
+          <h5 class="foot">It Takes A Village To Raise A Child</h5>
+        </div>
+      </footer>
 
       <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

@@ -25,6 +25,7 @@ const signInSuccess = function (response) {
   // Create a new key on the 'store' object
   // Give that key a value of 'response.user'
   store.user = response.user
+  $('#cloud-happy').hide()
   $('#update-message').hide()
   $('.jumbo-updatec').hide()
   $('.jumbo-two').hide()
