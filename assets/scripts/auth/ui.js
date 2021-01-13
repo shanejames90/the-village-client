@@ -52,17 +52,24 @@ const signInSuccess = function (response) {
   // $('.sign-in-message').text(`Welcome Back ${store.user.email}!`)
   $('#changepw-message').hide()
   $('.jumbo-updatepw').hide()
+  $('.authenticated').show()
+  $('.unauthenticated').hide()
   $('form').trigger('reset')
 }
 
 const signInFailure = function (error) {
+  $()
   $('.sign-up-message').hide()
   $('.jumbo-signup').hide()
   $('.jumbo-signupbg').hide()
-  $('.sign-up-message').text('Sign in failed with error: ' + error.responseJSON.message)
+  $('.sign-in-message').show()
+  $('.sign-in-message').text('Sign in failed with error: ' + error.responseJSON.message)
 }
 
 const signOutSuccess = function () {
+  $('.authenticated').hide()
+  $('.unauthenticated').show()
+  $('.welcome-message').hide()
   $('.sign-out-message').show()
   $('.jumbo-signoutbg').show()
   $('.jumbo-signout').show()
