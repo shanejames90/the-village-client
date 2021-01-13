@@ -9,6 +9,7 @@ const signUpSuccess = function (response) {
   $('.jumbo-signup').show()
   $('.jumbo-signupbg').show()
   $('.sign-up-message').show()
+  $('.error-message').hide()
   $('.sign-up-message').text('Congratulations, you are now apart of The Village! Sign in to your new home!')
   $('form').trigger('reset')
 }
@@ -58,12 +59,12 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function (error) {
-  $()
+  // console.log(error)
   $('.sign-up-message').hide()
   $('.jumbo-signup').hide()
   $('.jumbo-signupbg').hide()
-  $('.sign-in-message').show()
-  $('.sign-in-message').text('Sign in failed with error: ' + error.responseJSON.message)
+  $('.error-message').show()
+  $('.error-message').text('Sign in failed with error: ' + error.responseJSON.message)
 }
 
 const signOutSuccess = function () {
@@ -99,6 +100,7 @@ const signOutSuccess = function () {
   $('.jumbo-signup').hide()
   $('.jumbo-signupbg').hide()
   $('.jumbo-three').hide()
+  $('.error-message').hide()
 }
 
 const signOutFailure = function (error) {
