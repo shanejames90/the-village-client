@@ -38,12 +38,14 @@ const createChildrenFailure = function (error) {
 }
 
 const indexChildrenSuccess = function (response) {
+  console.log(response)
   const allChildren = response.children
   let allListHTML = ''
   allChildren.forEach(myChild => {
     const myChildHTML = (`
       <ul class="list-group list-group-horizontal-md" id="myList" data-header="Your Children">
-        <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${myChild.name}</li>
+        <li class="list-group-item flex-fill" id="myListId"><h5>ID:</h5> ${myChild.id}</li>
+        <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h5> ${myChild.name}</li>
         <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${myChild.dob}</li>
         <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight(lbs):</h5> ${myChild.birthWeight}</li>
         <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Length(in.):</h5> ${myChild.birthLength}</li>
