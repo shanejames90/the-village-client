@@ -27,7 +27,7 @@ const indexChildren = function (data) {
 const updateChildren = function (data) {
   // store id in variable and pass it to end of path
   // const id = data.child.id
-  const id = data.child.firstName
+  const id = data.child.id
   return $.ajax({
     url: config.apiUrl + '/children/' + id,
     method: 'PATCH',
@@ -41,7 +41,7 @@ const updateChildren = function (data) {
 const findChild = function (data) {
   // store id in variable and pass it to end of path
   // const id = data.child.id
-  const id = data.child.firstName
+  const id = data.child.id
   return $.ajax({
     url: config.apiUrl + '/children/' + id,
     method: 'GET',
@@ -54,7 +54,7 @@ const findChild = function (data) {
 const deleteChild = function (data) {
   // store id in variable and pass it to end of path
   // const id = data.child.id
-  const id = data.child.firstName
+  const id = data.child.id
   return $.ajax({
     url: config.apiUrl + '/children/' + id,
     method: 'DELETE',

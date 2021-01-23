@@ -35,15 +35,15 @@ const createChildrenFailure = function (error) {
   $('#create-child-message').show()
   $('.jumbo-addc').show()
   $('.sign-in-message').text('Sign up failed with error: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 const indexChildrenSuccess = function (response) {
-  console.log(response)
   const allChildren = response.children
   let allListHTML = ''
   allChildren.forEach(myChild => {
     const myChildHTML = (`
-      <ul class="list-group list-group-horizontal-md" id="myList" data-header="Your Children">
+      <ul class="list-group list-group-horizontal-xl" id="myList" data-header="Your Children">
         <li class="list-group-item flex-fill" id="myListId"><h5>ID:</h5> ${myChild.id}</li>
         <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h5> ${myChild.name}</li>
         <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${myChild.dob}</li>
@@ -99,7 +99,6 @@ const updateChildrenSuccess = function (response) {
   $('.jumbo-deletec').hide()
   $('#update-message').show()
   $('.jumbo-updatec').show()
-  // $('#update-message').text('Your little ducky is up to date!')
   $('form').trigger('reset')
 }
 
@@ -107,15 +106,16 @@ const updateChildrenFailure = function (error) {
   $('#update-message').show()
   $('.jumbo-updatec').show()
   $('#update-message').text('failed with error: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 const findChildSuccess = function (response) {
-  // store response resource in a variable
   const foundChild = response.child
   // turn to string
   // const foundString = JSON.stringify({ foundChild })
   const myChildHTML = (`
-        <ul class="list-group list-group-horizontal-md" id="oneList">
+        <ul class="list-group list-group-horizontal-xl" id="oneList">
+          <li class="list-group-item flex-fill" id="myListId"><h5>ID:</h4> ${foundChild.id}</li>
           <li class="list-group-item flex-fill" id="myListName"><h5>Name:</h4> ${foundChild.name}</li>
           <li class="list-group-item flex-fill" id="myListDob"><h5>Date of Birth:</h5> ${foundChild.dob}</li>
           <li class="list-group-item flex-fill" id="myListBw"><h5>Birth Weight(lbs):</h5> ${foundChild.birthWeight}</li>
@@ -142,13 +142,13 @@ const findChildSuccess = function (response) {
   $('#display-find').show()
   $('.display-one').html(myChildHTML)
   $('#display-find').text('Here is the little ducky:')
-  // $('#display-find').text(foundString)
   $('form').trigger('reset')
 }
 
 const findChildFailure = function (error) {
   $('#display-find').show()
   $('#display-find').text('failed with error: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 const deleteChildSuccess = function (response) {
@@ -178,6 +178,7 @@ const deleteChildFailure = function (error) {
   $('#delete-message').show()
   $('.jumbo-deletec').show()
   $('#delete-message').text('failed with error: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 module.exports = {

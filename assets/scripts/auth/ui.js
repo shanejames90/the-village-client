@@ -59,7 +59,6 @@ const signInSuccess = function (response) {
 }
 
 const signInFailure = function (error) {
-  // console.log(error)
   $('.sign-up-message').hide()
   $('.jumbo-signup').hide()
   $('.jumbo-signupbg').hide()
