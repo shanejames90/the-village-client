@@ -15,6 +15,7 @@ $(() => {
   $('.sign-out-message').hide()
   $('.jumbo-signoutbg').hide()
   $('.jumbo-signout').hide()
+  // $('#but1').on('submit', console.log('clicked'))
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#menu-toggle').click(function (e) {

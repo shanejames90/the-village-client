@@ -2,7 +2,13 @@
 
 * {
   box-sizing: border-box;
+}
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .mygrade {
@@ -15,6 +21,7 @@
 
 
 .welcome-message, .foot {
+  align-items: right;
   color: #D66853;
   font-family: 'Arizonia', cursive;
 
@@ -112,13 +119,15 @@
   // background: white;
   border-radius: 5px;
 }
-
-.modal-header {
-  background: rgba(128,128,128,1);
-}
-.modal-body {
+.modal-content {
   background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(255,255,255,1) 100%);
 }
+// .modal-header {
+//   background: rgba(128,128,128,1);
+// }
+// .modal-body {
+//   background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(255,255,255,1) 100%);
+// }
 
 .jumbo-addc {
   box-shadow:
