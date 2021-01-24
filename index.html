@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>The Village</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+      <!-- Bootstrap core CSS -->
+      <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+      <!-- Custom styles for this template -->
+      <!-- <link href="css/simple-sidebar.css" rel="stylesheet"> -->
+
+      <!-- <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" /> -->
+
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&display=swap');
+      </style>
+
+      <script src="https://kit.fontawesome.com/d02a534ee8.js" crossorigin="anonymous"></script>
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Merienda+One&display=swap');
+      </style>
+
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Timmana&display=swap');
+      </style>
+
+      <style>
+      @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Numans&family=Timmana&display=swap');
+      </style>
+
+    </head>
+    <body>
+      <div class="unauthenticated">
+        <div class="pos-f-t">
+          <div class="collapse" id="navbarToggleExternalContentUnauth">
+            <div class="bg-dark p-4">
+                <form id="sign-in">
+                  <input name="credentials[email]" type="text" placeholder="email" aria-label="sign-in">
+                  <input name="credentials[password]" type="password" placeholder="password" aria-label="sign-in">
+                  <button class="btn btn-outline-info btn-md" type="submit">Sign In</button>
+                </form>
+            </div>
+          </div>
+          <nav class="navbar navbar-dark bg-dark">
+            <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContentUnauth" aria-controls="navbarToggleExternalContentUnauth" aria-expanded="false" aria-label="Toggle navigation">
+              <span>Returning Villagers</span>
+            </button>
+            <h1 class="welcome-message">The Village<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h1>
+          </nav>
+        </div>
+
+        <!-- SING-UP USER MESSAGING -->
+      <div class="jumbotron jumbo-signupbg"></div>
+      <div class="jumbotron jumbo-signup"><strong>You Know What They Say: It Takes A Village To Raise A Child! Welcome To Yours!</strong><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/>
+      <h4 class="sign-up-message"></h4>
+      </div>
+
+      <!-- SING-OUT USER MESSAGING -->
+      <div class="jumbotron jumbo-signoutbg"></div>
+      <div class="jumbotron jumbo-signout"><strong class="user-msg">The Village Won't Be The Same Until You Return</strong><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/>
+      <h4 class="sign-out-message"></h4>
+      </div>
+      <div class="error-message"></div>
+
+      <div class="jumbotron jumbo-three">
+        <button type="button" class="btn btn-primary btn-lg" id="center-this" data-toggle="modal" data-target="#exampleModal" data-whatever="">Join The Village</button>
+      </div>
+
+
+      <div class="modal fade sign-up-modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign Up<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
+              <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+             <div class="modal-body">
+                <form id="sign-up">
+                  <div class="form-group">
+                    <label for="firstName" class="col-form-label">First Name:</label>
+                    <input name="credentials[firstName]" class="form-control" id="firstName" type="text" placeholder="enter your first name" aria-label="sign-up" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="email-address" class="col-form-label">Email:</label>
+                    <input name="credentials[email]" class="form-control" id="email-address" type="text" placeholder="enter your email" aria-label="sign-up" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="password-input" class="col-form-label">Password:</label>
+                    <input name="credentials[password]" class="form-control" type="password" id="password-input" placeholder="create a password" aria-label="sign-up" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="confirm-password" class="col-form-label">Confirm Password:</label>
+                    <input name="credentials[password_confirmation]" class="form-control" id="confirm-password" type="password" placeholder="confirm password" aria-label="sign-up" required>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-dismiss="modal">Close</button>
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Sign Up</button>
+                  </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+        <div class="mygrade"></div>
+      <!-- Beginning of AUTH Events -->
+      <div class="authenticated">
+        <div class="d-flex" id="wrapper">
+          <!-- Sidebar -->
+          <div class="bg-dark border-left" id="sidebar-wrapper">
+            <div class="list-group list-group-flush">
+
+              <!-- add child modal -->
+              <span data-toggle="tooltip" data-placement="right" title="Add A Child"><button class="btn btn-outline-info btn-lg" id="but1" type="submit" data-toggle="modal" data-target="#addChildModal" data-whatever="">Add A Child<i class="fas fa-child"></i></button></span>
+              <div class="modal fade" id="addChildModal" tabindex="-1" role="dialog" aria-labelledby="addChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="addChildModalLabel">Add Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="create-children">
+                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children" required>
+                        <div class="input group">
+                        <input name="child[dob]" type="date" placeholder="date of birth" onfocus="(this.type='date')" onblur="(this.type='text')"aria-label="create-children" required>
+                        </div>
+                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children" required><span class="input-group-addon">lbs</span>
+                        <div class="input group">
+                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children" required><span class="input-group-addon">in.</span>
+                        </div>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Add Child</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <form id="index-children">
+                <span data-toggle="tooltip" data-placement="right" title="Show Children"><button class="btn btn-outline-info btn-lg btn-block" id="but2" type="submit">Show Children<i class="fas fa-user-friends"></i></button></span>
+              </form>
+
+              <!-- update child modal -->
+              <span data-toggle="tooltip" data-placement="right" title="Update Your Child"><button class="btn btn-outline-info btn-lg" id="but3" type="submit" data-toggle="modal" data-target="#updateChildModal" data-whatever="">Update Your Child<i class="fas fa-user-edit"></i></button></span>
+              <div class="modal fade" id="updateChildModal" tabindex="-1" role="dialog" aria-labelledby="updateChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="updateChildModalLabel">Update Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="update-children">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="update-children" required>
+                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="update-children">
+                        <div class="input group">
+                        <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="update-children">
+                        </div>
+                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="update-children"><span class="input-group-addon">lbs</span>
+                        <div class="input group">
+                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="update-children"><span class="input-group-addon">in.</span>
+                        </div>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Update Child</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- find a child modal -->
+              <span data-toggle="tooltip" data-placement="right" title="Find Your Child"><button class="btn btn-outline-info btn-lg" id="but4" type="submit" data-toggle="modal" data-target="#findChildModal" data-whatever="">Find Your Child<i class="fas fa-search"></i></button></span>
+              <div class="modal fade" id="findChildModal" tabindex="-1" role="dialog" aria-labelledby="findChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="findChildModalLabel">Find Your Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="find-child">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child" required>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Find</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- delete child modal -->
+              <span data-toggle="tooltip" data-placement="right" title="Delte A Child"><button class="btn btn-outline-info btn-lg" id="but5" type="submit" data-toggle="modal" data-target="#deleteChildModal" data-whatever="">Delete A Child<i class="fas fa-user-minus"></i></button></span>
+              <div class="modal fade" id="deleteChildModal" tabindex="-1" role="dialog" aria-labelledby="deleteChildModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="deleteChildModalLabel">Delete A Child<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="delete-child">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child" required>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Delete A Child</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <!--  change password modal -->
+              <!-- <button class="btn btn-outline-info btn-lg" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever="">Change Password</button> -->
+              <div class="modal fade" id="pwModal" tabindex="-1" role="dialog" aria-labelledby="pwModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="pwModalLabel">Change Password<img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></h5>
+                      <button type="submit" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form id="change-password">
+                        <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password" required>
+                        <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password" required>
+                        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Change Password</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Sign out -->
+              <!-- <form id="sign-out">
+                <button class="btn btn-outline-info btn-lg btn-block" type="submit">Sign Out</button>
+              </form> -->
+
+            </div>
+          </div>
+            <!-- NAV BAR -->
+          <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="top-nav">
+              <button class="btn btn-primary" id="menu-toggle"><i class="fa fa-bars"></i></button>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="glyphicon glyphicon-list"></span>
+              </button>
+                <strong class="main-logo">The Village</strong>
+                <div class="btn-group open" id="nav-dropdown">
+                <!-- <a class="btn btn-outline-info"><i class="icon-user"></i> User</a> -->
+                <a class="btn btn-dark dropdown-toggle" data-toggle="dropdown" href="#">
+                   <span class="icon-caret-down"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="btn btn-light" type="submit" data-toggle="modal" data-target="#pwModal" data-whatever=""><i class="fas fa-cog"></i>Change Password</a></li>
+                  <!-- <li class="divider"></li> -->
+                  <form id="sign-out">
+                    <li><a class="btn btn-light btn-lg btn-block" id="sobut" type="submit"><i class="fas fa-power-off"></i>Sign Out</a></li>
+                  </form>
+                </ul>
+              </div>
+              <span><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/></span>
+            </nav>
+
+            <div class="container-fluid">
+
+              <!-- SIGN-IN MESSAGING -->
+              <div class="jumbo-signinbg"></div>
+              <div class="jumbotron jumbo-signin"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">It Takes A Village To Raise A Child</strong>
+              <h4 class="sign-in-message"></h4>
+              </div>
+
+              <!-- ADD ONE CHILD MESSAGING -->
+              <div class="jumbo-addcbg"></div>
+              <div class="jumbotron jumbo-addc"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">The Village Welcomes You With Open Arms...and Wings</strong>
+              <h5 id="create-child-message"></h5>
+              </div>
+
+              <!-- DELETE ONE CHILD MESSAGING -->
+              <div class="jumbotron jumbo-deletec"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Don't Be A Stranger, Our Wings Are Always Open To You</strong>
+              <h5 id="delete-message"></h5>
+              </div>
+
+              <!-- UPDATE ONE CHILD MESSAGING -->
+              <div class="jumbotron jumbo-updatec"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Thank You For Keeping Us In The Loop</strong>
+              <h5 id="update-message"></h5>
+              </div>
+
+              <!-- UPDATE PASSWORD MESSAGING -->
+              <div class="jumbotron jumbo-updatepw"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Your Village Credentials Are Safe and Sound</strong>
+              <h5 id="changepw-message"></h5>
+              </div>
+
+              <!-- find one child and display proto  -->
+              <div class="jumbotron jumbo-one"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Your Little Ducky Is So Precious</strong>
+                <h5 id="display-find"></h5>
+              <div class="display-one">
+              <ul class="list-group list-group-horizontal-md" id="oneList">
+                <li class="list-group-item" id="myListName">Name:</li>
+                <li class="list-group-item" id="myListDob">D.O.B:</li>
+                <li class="list-group-item" id="myListBw">Birth Weight:</li>
+                <li class="list-group-item" id="myListBl">Birth Length:</li>
+              </ul>
+              </div>
+              </div>
+              <!-- Display all children -->
+              <div class="jumbotron jumbo-two"><img src="https://img.icons8.com/clouds/64/000000/rubber-duck.png"/><strong class="user-msg">Your Little Duckies Are Growing So Fast</strong>
+                <h5 id="display-children"></h5>
+              <div class="display-children">
+              <ul class="list-group list-group-horizontal-md" id="myList">
+                <li class="list-group-item" id="myListName">Name:</li>
+                <li class="list-group-item" id="myListDob">D.O.B:</li>
+                <li class="list-group-item" id="myListBw">Birth Weight:</li>
+                <li class="list-group-item" id="myListBl">Birth Length:</li>
+              </ul>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer id="cloud-happy">
+        <div id="awan">
+          <h5 class="foot">It Takes A Village To Raise A Child</h5>
+        </div>
+      </footer>
+
+    <!-- Font Awesome JS -->
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    </body>
