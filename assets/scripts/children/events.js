@@ -35,7 +35,7 @@ const onUpdateChildren = function (event) {
   const form = event.target
   const data = getFormFields(form)
   $('#updateChildModal').modal('hide')
-  $('#update-message').text(`${data.child.firstName} is up to date!`)
+  $('#update-message').text('Your little one is up to date!')
   api.updateChildren(data)
     .then(ui.updateChildrenSuccess)
     .catch(ui.updateChildrenFailure)

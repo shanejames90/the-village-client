@@ -88,19 +88,19 @@
                 <form id="sign-up">
                   <div class="form-group">
                     <label for="firstName" class="col-form-label">First Name:</label>
-                    <input name="credentials[firstName]" class="form-control" id="firstName" type="text" placeholder="enter your first name" aria-label="sign-up">
+                    <input name="credentials[firstName]" class="form-control" id="firstName" type="text" placeholder="enter your first name" aria-label="sign-up" required>
                   </div>
                   <div class="form-group">
                     <label for="email-address" class="col-form-label">Email:</label>
-                    <input name="credentials[email]" class="form-control" id="email-address" type="text" placeholder="enter your email" aria-label="sign-up">
+                    <input name="credentials[email]" class="form-control" id="email-address" type="text" placeholder="enter your email" aria-label="sign-up" required>
                   </div>
                   <div class="form-group">
                     <label for="password-input" class="col-form-label">Password:</label>
-                    <input name="credentials[password]" class="form-control" type="password" id="password-input" placeholder="create a password" aria-label="sign-up">
+                    <input name="credentials[password]" class="form-control" type="password" id="password-input" placeholder="create a password" aria-label="sign-up" required>
                   </div>
                   <div class="form-group">
                     <label for="confirm-password" class="col-form-label">Confirm Password:</label>
-                    <input name="credentials[password_confirmation]" class="form-control" id="confirm-password" type="password" placeholder="confirm password" aria-label="sign-up">
+                    <input name="credentials[password_confirmation]" class="form-control" id="confirm-password" type="password" placeholder="confirm password" aria-label="sign-up" required>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-outline-info my-2 my-sm-0" data-dismiss="modal">Close</button>
@@ -133,13 +133,13 @@
                     </div>
                     <div class="modal-body">
                       <form id="create-children">
-                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children">
+                        <input name="child[firstName]" type="text" placeholder="first name" aria-label="create-children" required>
                         <div class="input group">
-                        <input name="child[dob]" type="date" placeholder="date of birth" onfocus="(this.type='date')" onblur="(this.type='text')"aria-label="create-children">
+                        <input name="child[dob]" type="date" placeholder="date of birth" onfocus="(this.type='date')" onblur="(this.type='text')"aria-label="create-children" required>
                         </div>
-                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children"><span class="input-group-addon">lbs</span>
+                        <input name="child[birthWeight]" type="number" placeholder="birth weight" aria-label="create-children" required><span class="input-group-addon">lbs</span>
                         <div class="input group">
-                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children"><span class="input-group-addon">in.</span>
+                        <input name="child[birthLength]" type="number" placeholder="birth length" aria-label="create-children" required><span class="input-group-addon">in.</span>
                         </div>
                         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Add Child</button>
                       </form>
@@ -165,7 +165,7 @@
                     </div>
                     <div class="modal-body">
                       <form id="update-children">
-                        <input name="child[id]" type="text" placeholder="child id" aria-label="update-children">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="update-children" required>
                         <input name="child[firstName]" type="text" placeholder="first name" aria-label="update-children">
                         <div class="input group">
                         <input name="child[dob]" type="date" placeholder="date of birth yyyy-mm-dd" aria-label="update-children">
@@ -194,9 +194,7 @@
                     </div>
                     <div class="modal-body">
                       <form id="find-child">
-                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
-                        <!-- <input name="child[firstName]" type="text" placeholder="first name" aria-label="find-child"> -->
-                        <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="find-child"> -->
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child" required>
                         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Find</button>
                       </form>
                     </div>
@@ -217,8 +215,7 @@
                     </div>
                     <div class="modal-body">
                       <form id="delete-child">
-                        <!-- <input name="child[id]" type="text" placeholder="child id" aria-label="find-child"> -->
-                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child">
+                        <input name="child[id]" type="text" placeholder="child id" aria-label="find-child" required>
                         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Delete A Child</button>
                       </form>
                     </div>
@@ -238,8 +235,8 @@
                     </div>
                     <div class="modal-body">
                       <form id="change-password">
-                        <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password">
-                        <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password">
+                        <input name="passwords[oldpw]" type="password" placeholder="old password" aria-label="change-password" required>
+                        <input name="passwords[newpw]" type="password" placeholder="new password" aria-label="change-password" required>
                         <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Change Password</button>
                       </form>
                     </div>
