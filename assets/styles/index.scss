@@ -447,30 +447,14 @@
 
 // PROTO MAIN PAGE footer
 
-// * { background:#C0DEED}
 #awan {
-  box-shadow:
-  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-  0 12.5px 10px rgba(0, 0, 0, 0.06),
-  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-  0 100px 80px rgba(0, 0, 0, 0.12)
-  ;
-
-
-
   min-height: 200px;
   width: 50vw;
   margin: 100px auto;
-  background: white;
   border-radius: 5px;
-
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity/see-through */
   color: white;
   padding: 20px;
   text-align: center;
-  filter: blur(1px);
 position: absolute;
 top:85%;
 width:100%;
@@ -478,54 +462,9 @@ height:25%;
 text-align:center;
 margin:0px;
 padding:0px;
-background-color:#C0DEED;
-background: url(https://abs.twimg.com/images/themes/theme1/bg.png) center top repeat-x;
 padding-top:100px;
 padding-bottom:10px;
   width: 100%;
   height: 135px;
-  animation: awan-animasi 10s linear infinite;
-  -ms-animation: awan-animasi 10s linear infinite;
-  -moz-animation: awan-animasi 10s linear infinite;
-  -webkit-animation: awan-animasi 10s linear infinite;
-}
 
-@keyframes awan-animasi {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 100% 0;
-  };
-}
-
-@-webkit-keyframes awan-animasi {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 100% 0;
-  };
-}
-
-@-ms-keyframes awan-animasi {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 100% 0;
-  };
-}
-
-@-moz-keyframes awan-animasi {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 100% 0;
-  };
 }
